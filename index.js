@@ -16,15 +16,19 @@ app.get('/',function(req,res){
 });
 
 app.post('/linewebhook', linebotParser);
-
 bot.on('message', function (event) {
-	if (event.message.text.toLowerCase() == "fuck"||event.message.text == "幹你娘") {
+	var 縮短 = event.message.text ;
+
+	if (縮短.toLowerCase() == "fuck"||縮短 == "幹你娘") {
 		event.reply("幹你娘").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
 		});
 	}
+
+
+
 	if (event.message.text == "id") {
 		event.reply(event.source.userId).then(function (data) {
 			console.log('Success', data);
