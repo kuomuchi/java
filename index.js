@@ -25,8 +25,8 @@ bot.on('message', function (event) {
 			console.log('Error', error);
 		});
 	}
-	if (event.message.text == "hi") {
-		event.reply("幹你娘").then(function (data) {
+	if (event.message.text == "id") {
+		event.reply(event.source.userId).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
