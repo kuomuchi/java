@@ -31,8 +31,8 @@ bot.on('message', function (event) {
 		});
 	}
 
-	if (收到 == "答案") {
-		event.reply("答案（題數）").then(function (data) {
+	if (收到 == "笑話答案"||收到 == "黃色答案"||收到 == "笑話答案"||收到 == "黃梗答案"||收到 == "黃色笑話答案"||收到 == "黃色笑話的答案") {
+		event.reply("笑話答案（題數）").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
