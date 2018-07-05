@@ -54,13 +54,12 @@ bot.on('message', function (event) {
 	}
 
 	if (收到 == "洗版") {
-		for(var X = 0; X > 50; X++){
 		event.reply("洗版摟！！").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
 		});
-	}}
+	}
 
 	if (收到 == "id") {
 		event.reply(event.source.userId).then(function (data) {
