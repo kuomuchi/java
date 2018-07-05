@@ -54,11 +54,7 @@ bot.on('message', function (event) {
 	}
 
 	if (收到 == "洗版") {
-		event.reply("洗版摟！！").then(function (data) {
-			console.log('Success', data);
-		}).catch(function (error) {
-			console.log('Error', error);
-		});
+		event.reply("洗版摟！！")
 	}
 
 	if (收到 == "id") {
