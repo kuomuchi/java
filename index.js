@@ -53,17 +53,10 @@ bot.on('message', function (event) {
 		});
 	}
 
+	var 洗版=["洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版",];
+
 	if (收到 == "洗版") {
-		event.reply("洗版摟！！")
-		event.reply("洗版摟！！")
-		event.reply("洗版摟！！")
-		event.reply("洗版摟！！")
-		event.reply("洗版摟！！")
-		event.reply("洗版摟！！")
-		event.reply("洗版摟！！")
-		event.reply("洗版摟！！")
-		event.reply("洗版摟！！")
-		event.reply("洗版摟！！")
+		event.reply(洗版+\c)
 	}
 
 	if (收到 == "id") {
