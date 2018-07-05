@@ -144,7 +144,7 @@ bot.on('message', function (event) {
 		}
 
 
-	
+
 		if (收到 == "可以嗎？"||收到 == "可以嗎"||收到 == "可以嗎？?") {
 			event.reply("不行!!").then(function (data) {
 				console.log('Success', data);
@@ -154,7 +154,7 @@ bot.on('message', function (event) {
 		}
 
 		if (收到.toLowerCase() == "no"||收到.toLowerCase() == "no!"||收到.toLowerCase() == "no!!") {
-			event.reply(要！！).then(function (data) {
+			event.reply("要！！").then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
 				console.log('Error', error);
@@ -162,7 +162,7 @@ bot.on('message', function (event) {
 		}
 
 		if (收到 == "不要"||收到 == "不要!"||收到 == "不要!!") {
-			event.reply(要！！).then(function (data) {
+			event.reply("要！！").then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
 				console.log('Error', error);
@@ -184,6 +184,9 @@ bot.on('message', function (event) {
 
 
 });
+
+
+
 
 bot.on("follow", function (event) {
   event.reply("你好！謝謝你加我好友 :D");
