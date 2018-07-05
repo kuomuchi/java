@@ -126,6 +126,50 @@ bot.on('message', function (event) {
 		});
 	}
 
+		if (收到 == "有人要玩嗎？"||收到 == "要玩嗎？"||收到 == "有人要玩嗎?？"||收到 == "要玩嗎？?") {
+			event.reply("我!!!").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+
+
+		if (收到 == "要玩什麼？"||收到 == "玩什麼？"||收到.toLowerCase() == "要玩mi嗎？"||收到.toLowerCase() == "要玩mi嗎？?"||收到.toLowerCase() == "玩mi？") {
+			event.reply("玩星海！！").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+
+
+	
+		if (收到 == "可以嗎？"||收到 == "可以嗎"||收到 == "可以嗎？?") {
+			event.reply("不行!!").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+
+		if (收到.toLowerCase() == "no"||收到.toLowerCase() == "no!"||收到.toLowerCase() == "no!!") {
+			event.reply(要！！).then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+
+		if (收到 == "不要"||收到 == "不要!"||收到 == "不要!!") {
+			event.reply(要！！).then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+
+
 
 	if (收到 == "id") {
 		event.reply(event.source.userId).then(function (data) {
@@ -134,6 +178,11 @@ bot.on('message', function (event) {
 			console.log('Error', error);
 		});
 	}
+
+
+
+
+
 });
 
 bot.on("follow", function (event) {
