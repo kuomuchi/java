@@ -186,13 +186,7 @@ if(event.source.userId === me){
 		}).catch(function (error) {
 			console.log('Error', error);
 		});
-	}}else{
-		event.reply("我比你棒").then(function (data) {
-			console.log('Success', data);
-		}).catch(function (error) {
-			console.log('Error', error);
-		});
-		}
+	}}
 
 
 
