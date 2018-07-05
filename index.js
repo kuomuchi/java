@@ -136,7 +136,7 @@ bot.on("follow", function (event) {
   bot.push(owner, "有人加我好友耶！\n我的朋友有一天會比你多的 >:D");
 });
 
-//當被加到群組
+
 bot.on("join", function (event) {
   event.reply("嗨");
   bot.push(owner, "有人加我到群組裡耶 :)");
