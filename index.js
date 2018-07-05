@@ -179,14 +179,14 @@ bot.on('message', function (event) {
 	}
 
 
-if(event.source.userId === me){
+
 	if (收到 == "我超棒!"||收到 == "我超棒!!"收到 == "我超棒!!!"收到 == "我超棒!!!!"收到 == "我超棒") {
 		event.reply("對！你超棒!").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
 		});
-	}}
+	}
 
 
 
