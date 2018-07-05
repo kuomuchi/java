@@ -187,7 +187,7 @@ if(event.source.userId === me){
 			console.log('Error', error);
 		});
 	}}else{
-		event.reply(屁啦！).then(function (data) {
+		event.reply("我比你棒").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
