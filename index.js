@@ -18,8 +18,6 @@ app.get('/',function(req,res){
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
 	var 收到 = event.message.text ;
-	var 招呼 = ["Hi"."你好~","喔喔","hello","Hello"];
-	var 打招呼 = 招呼[Math.floor(Math.random()*items.length)];
 
 	if (收到.toLowerCase() == "fuck"||收到 == "幹你娘") {
 		event.reply("幹你娘").then(function (data) {
@@ -29,7 +27,7 @@ bot.on('message', function (event) {
 		});
 	}
 
-	}
+
 
 	if (收到 == "id") {
 		event.reply(event.source.userId).then(function (data) {
