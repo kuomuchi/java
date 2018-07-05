@@ -23,7 +23,7 @@ bot.on('message', function (event) {
 	var Ha = ["1.餅乾是男的還是女的？","2.水餃是公的還是母的？", "3.為什麼女生不能常常生氣？","4.月經來了，猜一種過年用品","5.四個男生觸電，猜一種物品"];
 	var 髒髒 = Ha[Math.floor(Math.random()*Ha.length)];
 
-	if (收到 == "答案5") {
+	if (收到 == "笑話答案5") {
 		event.reply("電四雞").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
@@ -40,7 +40,7 @@ bot.on('message', function (event) {
 	}
 
 
-	if (收到 == "答案4") {
+	if (收到 == "笑話答案4") {
 		event.reply("紅胞").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
@@ -48,7 +48,7 @@ bot.on('message', function (event) {
 		});
 	}
 
-	if (收到 == "答案3") {
+	if (收到 == "笑話答案3") {
 		event.reply("因為，氣急敗壞").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
@@ -56,7 +56,7 @@ bot.on('message', function (event) {
 		});
 	}
 
-	if (收到 == "答案2") {
+	if (收到 == "笑話答案2") {
 		event.reply("公的，因為水餃有包皮").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
@@ -65,7 +65,7 @@ bot.on('message', function (event) {
 	}
 
 
-	if (收到 == "答案1") {
+	if (收到 == "笑話答案1") {
 		event.reply("女的，因為餅乾有穴穴").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
