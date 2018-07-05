@@ -139,12 +139,12 @@ bot.on("follow", function (event) {
 
 bot.on("join", function (event) {
   event.reply("嗨");
-  bot.push(owner, "有人加我到群組裡耶 :)");
+  bot.push("U813645541c262fb6d9c967efeb884aeb", "有人加我到群組裡耶 :)");
 });
 
 //當被踢
 bot.on("leave", function (event) {
-  bot.push(owner, "嗚嗚嗚嗚嗚嗚嗚有人把我從群組踢掉QAQQQQQQ");
+  bot.push("U813645541c262fb6d9c967efeb884aeb", "嗚嗚嗚嗚嗚嗚嗚有人把我從群組踢掉QAQQQQQQ");
 });
 setTimeout(function(){
   bot.push("U813645541c262fb6d9c967efeb884aeb", "啟動了！")
