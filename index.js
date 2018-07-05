@@ -135,7 +135,7 @@ bot.on('message', function (event) {
 	}
 
 
-	if (收到 == "要玩什麼？"||收到 == "玩什麼？"||收到.toLowerCase() == "要玩mi嗎？"||收到.toLowerCase() == "要玩mi嗎？"||收到.toLowerCase() == "玩mi？") {
+	if (收到 == "要玩什麼？"||收到 == "玩什麼？"||收到.toLowerCase() == "要玩mi嗎？"||收到.toLowerCase() == "要玩mi嗎？?"||收到.toLowerCase() == "玩mi？") {
 		event.reply("玩星海！！").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
