@@ -18,7 +18,7 @@ app.get('/',function(req,res){
 app.post('/linewebhook', linebotParser);
 
 bot.on('message', function (event) {
-	if (event.message.text.toLowerCase() == "fuck"||"幹你娘") {
+	if (event.message.text.toLowerCase() == "fuck"||event.message.text == "幹你娘") {
 		event.reply("幹你娘").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
