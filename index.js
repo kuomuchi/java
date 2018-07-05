@@ -29,7 +29,7 @@ bot.on('message', function (event) {
 		});
 	}
 
-	if (收到.toLowerCase == "Hello"||收到.toLowerCase == "Hi"||收到 == "安安"||收到 == "你好"||收到 == "安") {
+	if (收到.toLowerCase() == "Hello"||收到.toLowerCase() == "Hi"||收到 == "安安"||收到 == "你好"||收到 == "安") {
 		event.reply(event.source.userId).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
