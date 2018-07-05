@@ -169,7 +169,7 @@ bot.on('message', function (event) {
 		});
 	}
 
-	
+
 
 	if (收到 == "id") {
 		event.reply(event.source.userId).then(function (data) {
