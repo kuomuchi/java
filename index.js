@@ -131,6 +131,21 @@ bot.on('message', function (event) {
 	}
 });
 
+bot.on("follow", function (event) {
+  event.reply("你好！謝謝你加我好友 :D");
+  bot.push(owner, "有人加我好友耶！\n我的朋友有一天會比你多的 >:D");
+});
+
+//當被加到群組
+bot.on("join", function (event) {
+  event.reply("嗨");
+  bot.push(owner, "有人加我到群組裡耶 :)");
+});
+
+//當被踢
+bot.on("leave", function (event) {
+  bot.push(owner, "嗚嗚嗚嗚嗚嗚嗚有人把我從群組踢掉QAQQQQQQ");
+});
 setTimeout(function(){
   bot.push("U813645541c262fb6d9c967efeb884aeb", "啟動了！")
 }, 0)
