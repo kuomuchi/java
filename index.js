@@ -54,9 +54,17 @@ bot.on('message', function (event) {
 	}
 
 	if (收到 == "洗版") {
-		for(var x=0; x>50; x++){
 		event.reply("洗版摟！！")
-	}}
+		event.reply("洗版摟！！")
+		event.reply("洗版摟！！")
+		event.reply("洗版摟！！")
+		event.reply("洗版摟！！")
+		event.reply("洗版摟！！")
+		event.reply("洗版摟！！")
+		event.reply("洗版摟！！")
+		event.reply("洗版摟！！")
+		event.reply("洗版摟！！")
+	}
 
 	if (收到 == "id") {
 		event.reply(event.source.userId).then(function (data) {
