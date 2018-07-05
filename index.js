@@ -17,9 +17,11 @@ app.get('/',function(req,res){
 
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
-	var 縮短 = event.message.text ;
+	var 收到 = event.message.text ;
+	var 招呼 = ["Hi"."你好~","喔喔","hello","Hello"];
+	var 打招呼 = 招呼[Math.floor(Math.random()*items.length)];
 
-	if (縮短.toLowerCase() == "fuck"||縮短 == "幹你娘") {
+	if (收到.toLowerCase() == "fuck"||收到 == "幹你娘") {
 		event.reply("幹你娘").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
@@ -27,9 +29,15 @@ bot.on('message', function (event) {
 		});
 	}
 
+	if (收到.toLowerCase() == "hello"||收到 == "你好"||收到.toLowerCase() == "hi"||收到 == "安安"||收到 == "安") {
+		event.reply(打招呼).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
 
-
-	if (event.message.text == "id") {
+	if (收到 == "id") {
 		event.reply(event.source.userId).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
