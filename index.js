@@ -54,7 +54,13 @@ bot.on('message', function (event) {
 	}
 
 	var 洗版=["洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版",];
-
+	if (收到 == "洗版") {
+		event.reply(洗版).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
 	if (收到 == "id") {
 		event.reply(event.source.userId).then(function (data) {
 			console.log('Success', data);
