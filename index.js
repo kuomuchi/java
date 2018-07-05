@@ -177,17 +177,6 @@ bot.on('message', function (event) {
 			console.log('Error', error);
 		});
 	}
-
-
-
-	if (收到 == "我超棒!"||收到 == "我超棒!!"收到 == "我超棒!!!"收到 == "我超棒!!!!"收到 == "我超棒") {
-		event.reply("對！你超棒!").then(function (data) {
-			console.log('Success', data);
-		}).catch(function (error) {
-			console.log('Error', error);
-		});
-	}
-
 });
 
 
