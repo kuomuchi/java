@@ -169,13 +169,7 @@ bot.on('message', function (event) {
 		});
 	}
 
-	if (收到 == "現在要幹嘛！") {
-		event.reply("打...星海！！！").then(function (data) {
-			console.log('Success', data);
-		}).catch(function (error) {
-			console.log('Error', error);
-		});
-	}
+	
 
 	if (收到 == "id") {
 		event.reply(event.source.userId).then(function (data) {
