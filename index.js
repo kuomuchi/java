@@ -150,6 +150,22 @@ bot.on('message', function (event) {
 		});
 	}
 
+	if (收到.toLowerCase() == "no"||收到.toLowerCase() == "no!"||收到.toLowerCase() == "no!!") {
+		event.reply(要！！).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+	if (收到 == "不要"||收到 == "不要!"||收到 == "不要!!") {
+		event.reply(要！！).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
 	if (收到 == "id") {
 		event.reply(event.source.userId).then(function (data) {
 			console.log('Success', data);
