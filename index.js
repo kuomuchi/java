@@ -31,6 +31,15 @@ bot.on('message', function (event) {
 		});
 	}
 
+	if (收到 == "答案") {
+		event.reply("答案（題數）").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+
 	if (收到 == "答案4") {
 		event.reply("紅胞").then(function (data) {
 			console.log('Success', data);
