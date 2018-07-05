@@ -177,7 +177,13 @@ bot.on('message', function (event) {
 			});
 		}}
 
-
+		if (收到 == "312") {
+			event.reply("29° 58").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
 
 
 
