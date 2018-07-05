@@ -52,10 +52,9 @@ bot.on('message', function (event) {
 			console.log('Error', error);
 		});
 	}
-
-	var X=["洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版",];
+	var LOL = "洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版洗版";
 	if (收到 == "洗版") {
-		event.reply(X).then(function (data) {
+		event.reply(LOL).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
