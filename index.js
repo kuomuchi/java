@@ -53,9 +53,9 @@ bot.on('message', function (event) {
 		});
 	}
 
-	var 洗版=["洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版",];
+	var X=["洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版","洗版",];
 	if (收到 == "洗版") {
-		event.reply(洗版).then(function (data) {
+		event.reply(X).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
