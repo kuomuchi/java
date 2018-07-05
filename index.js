@@ -29,6 +29,22 @@ bot.on('message', function (event) {
 		});
 	}
 
+	if (收到 == ".") {
+		event.reply(".").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+	if (收到 == "?") {
+		event.reply("?").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
 	if (收到.toLowerCase() == "hello"||收到.toLowerCase() == "hi"||收到 == "安安"||收到 == "你好"||收到 == "安"||收到 == "喔喔喔") {
 		event.reply(hello).then(function (data) {
 			console.log('Success', data);
