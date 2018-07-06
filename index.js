@@ -23,7 +23,6 @@ bot.on('message', function (event) {
 	var Ha = ["1.餅乾是男的還是女的？","2.水餃是公的還是母的？", "3.為什麼女生不能常常生氣？","4.月經來了，猜一種過年用品","5.四個男生觸電，猜一種物品"];
 	var 髒髒 = Ha[Math.floor(Math.random()*Ha.length)];
 	var me = "U813645541c262fb6d9c967efeb884aeb"
-	var X = 0;
 
 	if (收到 == "笑話答案5") {
 		event.reply("電四雞").then(function (data) {
@@ -169,20 +168,6 @@ bot.on('message', function (event) {
 		}
 
 
-		if (收到 == "齁") {
-			if(X < 5){
-			X++; event.reply(限制).then(function (data) {
-				console.log('Success', data);
-			}).catch(function (error) {
-				console.log('Error', error);
-			});
-		}else{
-			X=0; event.reply("幹！").then(function (data) {
-				console.log('Success', data);
-			}).catch(function (error) {
-				console.log('Error', error);
-			});
-		}}
 
 
 		if (收到 == "哇哈哈"||收到 == "哈"||收到 == "哈哈"){
