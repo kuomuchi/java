@@ -35,7 +35,7 @@ bot.on('message', function (event) {
 			});
 		}
 	}
-	if (收到 == sayIsay) {
+	if (收到 == sayisay) {
 		var sayIsay = !sayIsay;
 	}
 	//################################################
