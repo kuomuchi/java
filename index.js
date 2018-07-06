@@ -153,7 +153,7 @@ bot.on('message', function (event) {
 		}
 
 		if (收到.toLowerCase() == "no"||收到.toLowerCase() == "no!"||收到.toLowerCase() == "no!!") {
-			event.reply("要！！").then(function (data) {
+			event.reply("yes！！").then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
 				console.log('Error', error);
@@ -168,7 +168,7 @@ bot.on('message', function (event) {
 			});
 		}
 
-		if (收到 == "哇哈哈"){
+		if (收到 == "哇哈哈"||收到 == "哈"||收到 == "哈哈"){
 			if(event.source.userId === me){
 			event.reply("哇哈哈哈哈哈!!!").then(function (data) {
 				console.log('Success', data);
@@ -185,6 +185,13 @@ bot.on('message', function (event) {
 			});
 		}
 
+		if (收到 == "像這樣?") {
+			event.reply("哪樣？").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
 
 
 	if (收到 == "id") {
