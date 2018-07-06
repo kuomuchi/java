@@ -33,7 +33,7 @@ bot.on('message', function (event) {
 		});
 	}
 
-	var 測試 = 0;
+	var 測試 = "0";
 	if(收到 == "12"){
 		event.reply(測試).then(function (data) {
 			console.log('Success', data);
