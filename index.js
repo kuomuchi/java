@@ -36,6 +36,7 @@ bot.on('message', function (event) {
 	var 測試 = 0;
 	if(收到 == "12"){
 		event.reply(""+測試).then(function (data) {
+			測試++;
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
@@ -55,7 +56,7 @@ bot.on('message', function (event) {
 
 
 	if (收到 == "笑話答案4") {
-		event.reply("紅胞").then(function (data) {
+		event.reply("紅鮑").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
