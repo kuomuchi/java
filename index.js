@@ -36,11 +36,11 @@ bot.on('message', function (event) {
 	var 測試 = 0;
 	if(收到 == "12"){
 		event.reply(""+測試).then(function (data) {
-			測試=測試+1;
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
 		});
+		測試++;
 	}
 
 
