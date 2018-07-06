@@ -23,7 +23,7 @@ bot.on('message', function (event) {
 	var Ha = ["1.餅乾是男的還是女的？","2.水餃是公的還是母的？", "3.為什麼女生不能常常生氣？","4.月經來了，猜一種過年用品","5.四個男生觸電，猜一種物品"];
 	var 髒髒 = Ha[Math.floor(Math.random()*Ha.length)];
 	var me = "U813645541c262fb6d9c967efeb884aeb";
-	var sayIsay = true;
+	var sayIsay = false;
 
 //################################################ sayIsay
 	if (sayIsay) {
@@ -36,7 +36,7 @@ bot.on('message', function (event) {
 		}
 	}
 	if (收到 == "sayisay") {
-		var sayIsay = !sayIsay;
+		sayIsay = !sayIsay;
 	}
 	//################################################
 
