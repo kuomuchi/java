@@ -35,14 +35,6 @@ bot.on('message', function (event) {
 
 
 
-	if (收到) {
-		event.reply(""＋收到).then(function (data) {
-			console.log('Success', data);
-		}).catch(function (error) {
-			console.log('Error', error);
-		});
-	}
-
 
 
 
