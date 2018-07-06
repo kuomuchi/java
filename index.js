@@ -27,7 +27,7 @@ bot.on('message', function (event) {
 
 //################################################ sayIsay
 	if (sayIsay) {
-		if (收到 != sayIsay) {
+		if (收到 != sayisay) {
 				event.reply(event.message.text).then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
