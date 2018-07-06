@@ -24,6 +24,11 @@ bot.on('message', function (event) {
 	var 髒髒 = Ha[Math.floor(Math.random()*Ha.length)];
 	var me = "U813645541c262fb6d9c967efeb884aeb";
 
+		event.reply(event.message.text ).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
 
 	if (收到 == "笑話答案5") {
 		event.reply("電四雞").then(function (data) {
@@ -32,11 +37,6 @@ bot.on('message', function (event) {
 			console.log('Error', error);
 		});
 	}
-
-
-
-
-
 
 	if (收到 == "笑話答案"||收到 == "黃色答案"||收到 == "笑話答案"||收到 == "黃梗答案"||收到 == "黃色笑話答案"||收到 == "黃色笑話的答案") {
 		event.reply("笑話答案（題數）").then(function (data) {
