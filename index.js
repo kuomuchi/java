@@ -25,7 +25,8 @@ bot.on('message', function (event) {
 	var me = "U813645541c262fb6d9c967efeb884aeb";
 	var sayIsay = true;
 
-	if (sayIsay = true) {
+//################################################ sayIsay
+	if (sayIsay) {
 		if (收到 != sayIsay) {
 				event.reply(event.message.text).then(function (data) {
 				console.log('Success', data);
@@ -37,6 +38,7 @@ bot.on('message', function (event) {
 	if (收到 == sayIsay) {
 		var sayIsay = !sayIsay;
 	}
+	//################################################
 
 	if (收到 == "笑話答案5") {
 		event.reply("電四雞").then(function (data) {
