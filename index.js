@@ -171,7 +171,7 @@ bot.on('message', function (event) {
 
 		if (收到 == "齁") {
 			if(限制 < 5){
-			限制++; event.reply("齁").then(function (data) {
+			限制 = 限制+1; event.reply("齁").then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
 				console.log('Error', error);
