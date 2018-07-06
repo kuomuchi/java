@@ -24,6 +24,31 @@ bot.on('message', function (event) {
 	var Ha = ["1.餅乾是男的還是女的？","2.水餃是公的還是母的？", "3.為什麼女生不能常常生氣？","4.月經來了，猜一種過年用品","5.四個男生觸電，猜一種物品"];
 	var 髒髒 = Ha[Math.floor(Math.random()*Ha.length)];
 	var me = "U813645541c262fb6d9c967efeb884aeb"
+	var 學 = 0;
+
+if(學 == 1)
+	if (收到) {
+		event.reply(event.message.text).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+
+	if (收到 == "學") {
+		學 = 1;
+	}
+
+	if (收到 == "別學") {
+		學 = 0;
+	}
+
+
+
+
+
+
 
 
 	if (收到 == "笑話答案5") {
@@ -196,7 +221,7 @@ bot.on('message', function (event) {
 
 
 	if (收到.toLowerCase() == "id") {
-		event.reply(other.event.source.userId).then(function (data) {
+		event.reply(event.source.userId).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
