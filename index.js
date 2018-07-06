@@ -18,7 +18,8 @@ app.get('/',function(req,res){
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
 	var 收到 = event.message.text ;
-	var items = ["安安","安","你好～","喔喔喔！！","喔喔！","喔！！！！","喔喔喔","weeeeeeee~~","weeee~~~","Hello","Hi~"];
+	var items = ["安安",
+	"安","你好～","喔喔喔！！","喔喔！","喔！！！！","喔喔喔","weeeeeeee~~","weeee~~~","Hello","Hi~"];
 	var hello = items[Math.floor(Math.random()*items.length)];
 	var Ha = ["1.餅乾是男的還是女的？","2.水餃是公的還是母的？", "3.為什麼女生不能常常生氣？","4.月經來了，猜一種過年用品","5.四個男生觸電，猜一種物品"];
 	var 髒髒 = Ha[Math.floor(Math.random()*Ha.length)];
@@ -194,8 +195,8 @@ bot.on('message', function (event) {
 		}
 
 
-	if (收到 == "id") {
-		event.reply(event.source.userId).then(function (data) {
+	if (收到.toLowerCase() == "id") {
+		event.reply(other.event.source.userId).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
