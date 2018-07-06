@@ -14,7 +14,7 @@ const linebotParser = bot.parser();
 app.get('/',function(req,res){
     res.send('Hello World!');
 });
-var 測試 = 0;
+var 限制 = 0;
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
 	var 收到 = event.message.text ;
@@ -34,13 +34,13 @@ bot.on('message', function (event) {
 	}
 
 
-	if(收到 == "12"){
-		event.reply(""+測試).then(function (data) {
+
+	if (收到 == 收到) {
+		event.reply(""＋收到).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
 		});
-		測試++;
 	}
 
 
