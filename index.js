@@ -34,6 +34,22 @@ bot.on('message', function (event) {
 	}
 
 
+	if (收到 == "差不多") {
+		event.reply("差很多").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+	if (/😂/.test(收到)) {
+		event.reply("😂").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
 
 
 
