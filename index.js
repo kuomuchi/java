@@ -37,16 +37,8 @@ bot.on('message', function (event) {
 
 	if (收到.toLowerCase() == "我好棒") {
 		if(event.source.userId === me){
-		event.reply("對啊").then(function (data) {
-			console.log('Success', data);
-		}).catch(function (error) {
-			console.log('Error', error);
-		});
-	}}else{event.reply("屁...").then(function (data) {
-		console.log('Success', data);
-	}).catch(function (error) {
-		console.log('Error', error);
-	});}
+		event.reply("對啊")
+	}else{event.reply("屁...")}
 
 
 	if (收到 == "=="||收到 == "＝＝") {
