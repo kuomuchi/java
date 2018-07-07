@@ -25,20 +25,23 @@ bot.on('message', function (event) {
 	var me = "U813645541c262fb6d9c967efeb884aeb";
 	var sayIsay = false;
 
-//################################################ sayIsay
-	if (sayIsay) {
-		if (收到 != "sayisay") {
-				event.reply(event.message.text).then(function (data) {
-				console.log('Success', data);
-			}).catch(function (error) {
-				console.log('Error', error);
-			});
-		}
+	if (收到 == "=="||收到 == "＝＝") {
+		event.reply("＝＝").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
 	}
-	if (收到 == "sayisay") {
-		sayIsay = !sayIsay;
+
+
+	if (收到 == "好喔") {
+		event.reply("不好！！").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
 	}
-	//################################################
+
 
 	if (收到 == "笑話答案5") {
 		event.reply("電四雞").then(function (data) {
