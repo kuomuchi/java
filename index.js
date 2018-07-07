@@ -25,7 +25,7 @@ bot.on('message', function (event) {
 	var me = "U813645541c262fb6d9c967efeb884aeb";
 	var sayIsay = false;
 
-	if (收到.toLowerCase() == "wtf") {
+	if (收到.toLowerCase() == "wtf"||收到 === "ＷＴＦ") {
 		event.reply("Fuck you").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
@@ -225,7 +225,7 @@ if (收到 === "你會不會玩遊戲") {
 
 
 
-		if (收到 == "可以嗎？"||收到 == "可以嗎"||收到 == "可以嗎？?") {
+		if (/"可以嗎？"/test.(收到)) {
 			event.reply("不行!!").then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
