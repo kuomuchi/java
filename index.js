@@ -175,6 +175,14 @@ if (收到 === "你會不會玩遊戲") {
 		});
 	}
 
+	if (/派大星/.test(收到)) {
+		event.reply("我是海綿寶寶！！").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
 
 	if (收到.toLowerCase() == "fuck"||收到.toLowerCase() == "fuck you"||收到 == "幹你娘") {
 		event.reply("幹你娘").then(function (data) {
@@ -183,6 +191,32 @@ if (收到 === "你會不會玩遊戲") {
 			console.log('Error', error);
 		});
 	}
+
+	if (收到 == "可惡") {
+		event.reply("喔..對啊").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+	if (收到 == "傻眼") {
+		event.reply("喔..").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+
+
+		if (收到 == "傻眼") {
+			event.reply("喔..").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
 
 	if (收到 == ".") {
 		event.reply(".").then(function (data) {
