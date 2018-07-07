@@ -34,6 +34,8 @@ bot.on('message', function (event) {
 	}
 
 
+
+
 	if (收到 == "差不多") {
 		event.reply("差很多").then(function (data) {
 			console.log('Success', data);
@@ -225,7 +227,7 @@ if (收到 === "你會不會玩遊戲") {
 
 
 
-		if (/"可以嗎？"/test.(收到)) {
+		if (/可以嗎/test.(收到)) {
 			event.reply("不行!!").then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
