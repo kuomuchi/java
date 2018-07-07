@@ -25,6 +25,30 @@ bot.on('message', function (event) {
 	var me = "U813645541c262fb6d9c967efeb884aeb";
 	var sayIsay = false;
 
+	if (收到.toLowerCase() == "wtf") {
+		event.reply("Fuck you").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+
+
+	if (收到.toLowerCase() == "我好棒") {
+		if(event.source.userId === me){
+		event.reply("對啊").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}}else{event.reply("屁...").then(function (data) {
+		console.log('Success', data);
+	}).catch(function (error) {
+		console.log('Error', error);
+	});}
+
+
 	if (收到 == "=="||收到 == "＝＝") {
 		event.reply("＝＝").then(function (data) {
 			console.log('Success', data);
@@ -103,7 +127,7 @@ bot.on('message', function (event) {
 	}
 
 
-	if (收到.toLowerCase() == "fuck"||收到 == "幹你娘") {
+	if (收到.toLowerCase() == "fuck"||收到.toLowerCase() == "fuck you"||收到 == "幹你娘") {
 		event.reply("幹你娘").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
