@@ -80,6 +80,14 @@ if (收到 === "你會不會玩遊戲") {
 		});
 	}
 
+	if (/可以嗎/.test(收到)) {
+		event.reply("不行!!").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
 	if (/誒/.test(收到)) {
 		event.reply("誒～").then(function (data) {
 			console.log('Success', data);
@@ -225,15 +233,6 @@ if (收到 === "你會不會玩遊戲") {
 			});
 		}
 
-
-
-		if (/可以嗎/test.(收到)) {
-			event.reply("不行!!").then(function (data) {
-				console.log('Success', data);
-			}).catch(function (error) {
-				console.log('Error', error);
-			});
-		}
 
 		if (收到.toLowerCase() == "no"||收到.toLowerCase() == "no!"||收到.toLowerCase() == "no!!") {
 			event.reply("yes！！").then(function (data) {
