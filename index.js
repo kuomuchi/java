@@ -42,6 +42,34 @@ bot.on('message', function (event) {
 		});
 	}
 
+	if (/java/.test(收到.toLowerCase())) {
+		event.reply("我是派大星！！").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+
+
+if (收到 === "你會不會玩遊戲") {
+	event.reply("星海！").then(function (data) {
+		console.log('Success', data);
+	}).catch(function (error) {
+		console.log('Error', error);
+	});
+}
+
+
+	if (/熊熊/.test(收到)) {
+		event.reply("我是派大星！！").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+
 	if (/😂/.test(收到)) {
 		event.reply("😂").then(function (data) {
 			console.log('Success', data);
@@ -50,6 +78,13 @@ bot.on('message', function (event) {
 		});
 	}
 
+	if (/誒/.test(收到)) {
+		event.reply("誒～").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
 
 
 
