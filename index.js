@@ -284,6 +284,13 @@ if (收到 === "你會不會玩遊戲") {
 			});
 		}
 
+		if (/數學/.test(收到)) {
+			event.reply("NO數學！").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
 
 
 
@@ -295,7 +302,7 @@ if (收到 === "你會不會玩遊戲") {
 				console.log('Error', error);
 			});
 		}}
-		
+
 		if (收到 == "312") {
 			event.reply("29° 58").then(function (data) {
 				console.log('Success', data);
