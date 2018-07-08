@@ -298,7 +298,6 @@ if (收到 === "你會不會玩遊戲") {
 
 
 		if (/我好棒/.teat(收到)||/我超棒/.teat(收到)){
-			if(event.source.userId === me){
 			event.reply("對啊！").then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
