@@ -306,16 +306,6 @@ if (收到 === "你會不會玩遊戲") {
 			});
 		}}
 
-		if (/我好棒/.teat(收到)||/我超棒/.teat(收到)){
-			if(event.source.userId != me){
-			event.reply("你不棒！！").then(function (data) {
-				console.log('Success', data);
-			}).catch(function (error) {
-				console.log('Error', error);
-			});
-		}}
-
-
 
 		if (收到 == "312") {
 			event.reply("29° 58").then(function (data) {
