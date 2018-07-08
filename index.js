@@ -284,13 +284,14 @@ if (收到 === "你會不會玩遊戲") {
 			});
 		}
 
-		if (/數學/.test(收到)) {
-			event.reply("NO數學！").then(function (data) {
+		if (/你好棒||我好棒/.test(收到)) {
+			event.reply("NO數學!!!!").then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
 				console.log('Error', error);
 			});
 		}
+
 
 
 
