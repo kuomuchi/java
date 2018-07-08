@@ -276,6 +276,16 @@ if (收到 === "你會不會玩遊戲") {
 			});
 		}
 
+
+		if (收到.toLowerCase() == "ｑ"||收到.toLowerCase() == "qq") {
+			event.reply("yes！！").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+
+
 		if (收到 == "不要"||收到 == "不要!"||收到 == "不要!!") {
 			event.reply("要！！").then(function (data) {
 				console.log('Success', data);
