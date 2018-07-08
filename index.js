@@ -310,7 +310,13 @@ if (收到 === "你會不會玩遊戲") {
 			});
 		}
 
-
+		if (/呵/.test(收到)) {
+			event.reply("嘿嘿..").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
 
 		if (收到 == "哇哈哈"||收到 == "哈"||收到 == "哈哈"){
 			if(event.source.userId === me){
