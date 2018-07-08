@@ -292,6 +292,13 @@ if (收到 === "你會不會玩遊戲") {
 			});
 		}
 
+		if (/無聊/.test(收到)) {
+			event.reply("去玩星海！！").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
 
 
 
