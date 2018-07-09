@@ -119,6 +119,13 @@ if (收到 === "你會不會玩遊戲") {
 		});
 	}
 
+	if (/認真上課/.test(收到)) {
+		event.reply("假的").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
 
 
 	if (收到 == "=="||收到 == "＝＝") {
@@ -130,7 +137,7 @@ if (收到 === "你會不會玩遊戲") {
 	}
 
 
-	if (收到 == "好喔") {
+	if (收到 == "好喔"||收到 == "好") {
 		event.reply("不好！！").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
