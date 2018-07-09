@@ -78,6 +78,13 @@ if (收到 === "你會不會玩遊戲") {
 			console.log('Error', error);
 		});
 	}
+	if (收到 == "ok"||/ok./.test(收到)) {
+		event.reply("不ok！").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
 
 	if (/可以嗎/.test(收到)) {
 		event.reply("不行!!").then(function (data) {
@@ -96,7 +103,7 @@ if (收到 === "你會不會玩遊戲") {
 	}
 
 	if (/不知道/.test(收到)) {
-		event.reply("你要知道").then(function (data) {
+		event.reply("你必須要知道！").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
