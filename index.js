@@ -18,6 +18,8 @@ var randomString = function (strings) {
 app.get('/',function(req,res){
     res.send('Hello World!');
 });
+var attack = ["一個人一生只能喝一次岩漿","過了一分鐘，就過了60秒","誰能想的到，這名16歲少女，在四年前，只是一名12歲少女","當你的左臉被人打，那你的左臉就會痛","人被殺，就會死。"];
+var Att = attack[Math.floor(Math.random()*attack.length)];
 var 限制 = 0;
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
@@ -28,8 +30,6 @@ bot.on('message', function (event) {
 	var 髒髒 = Ha[Math.floor(Math.random()*Ha.length)];
 	var me = "U813645541c262fb6d9c967efeb884aeb";
 	var sayIsay = false;
-	var attack = ["一個人一生只能喝一次岩漿","過了一分鐘，就過了60秒","誰能想的到，這名16歲少女，在四年前，只是一名12歲少女","當你的左臉被人打，那你的左臉就會痛","人被殺，就會死。"];
-	var Att = attack[Math.floor(Math.random()*attack.length)];
 
 	if (收到.toLowerCase() == "wtf"||收到 === "ＷＴＦ") {
 		event.reply("Fuck you").then(function (data) {
@@ -48,6 +48,14 @@ bot.on('message', function (event) {
 	}
 
 
+		if (收到 == "幹話") {
+			if(event.source.userId == me){
+			event.reply(Att).then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}}
 
 
 	if (/java/.test(收到.toLowerCase())) {
