@@ -48,7 +48,7 @@ bot.on('message', function (event) {
 	}
 
 	if (收到 == "幹話") {if(event.source.userId == me){
-		event.reply("Att").then(function (data) {
+		event.reply(Att).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
