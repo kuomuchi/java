@@ -33,9 +33,6 @@ bot.on('message', function (event) {
 		});
 	}
 
-
-
-
 	if (收到 == "差不多") {
 		event.reply("差很多").then(function (data) {
 			console.log('Success', data);
@@ -43,6 +40,8 @@ bot.on('message', function (event) {
 			console.log('Error', error);
 		});
 	}
+
+
 
 	if (/java/.test(收到.toLowerCase())) {
 		event.reply("我是派大星！！").then(function (data) {
@@ -96,6 +95,23 @@ if (收到 === "你會不會玩遊戲") {
 		});
 	}
 
+	if (/不知道/.test(收到)) {
+		event.reply("你要知道").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+
+	if (/盡量/.test(收到)) {
+		event.reply("NO! 沒有盡量！").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
 
 
 	if (收到 == "=="||收到 == "＝＝") {
@@ -115,6 +131,22 @@ if (收到 === "你會不會玩遊戲") {
 		});
 	}
 
+	if (/恩/.test(收到)) {
+		event.reply("恩？").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+
+		if (/嗯/.test(收到)) {
+			event.reply("嗯？").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
 
 	if (收到 == "笑話答案5") {
 		event.reply("電四雞").then(function (data) {
@@ -278,7 +310,7 @@ if (收到 === "你會不會玩遊戲") {
 
 
 		if (收到.toLowerCase() == "ｑ"||收到.toLowerCase() == "qq") {
-			event.reply("yes！！").then(function (data) {
+			event.reply("QaQ").then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
 				console.log('Error', error);
