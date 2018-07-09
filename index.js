@@ -28,7 +28,6 @@ bot.on('message', function (event) {
 	var Ha = ["1.餅乾是男的還是女的？","2.水餃是公的還是母的？", "3.為什麼女生不能常常生氣？","4.月經來了，猜一種過年用品","5.四個男生觸電，猜一種物品"];
 	var 髒髒 = Ha[Math.floor(Math.random()*Ha.length)];
 	var me = "U813645541c262fb6d9c967efeb884aeb";
-	var sayIsay = false;
 
 	if (收到.toLowerCase() == "wtf"||收到 === "ＷＴＦ") {
 		event.reply("Fuck you").then(function (data) {
@@ -82,6 +81,7 @@ if (收到 === "你會不會玩遊戲") {
 			console.log('Error', error);
 		});
 	}
+	
 	if (收到 == "ok"||/ok./.test(收到)) {
 		event.reply("不ok！").then(function (data) {
 			console.log('Success', data);
