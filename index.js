@@ -119,6 +119,15 @@ if (收到 === "你會不會玩遊戲") {
 		});
 	}
 
+
+		if (/海綿寶寶/.test(收到)) {
+			event.reply("我是Java!").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+
 	if (/認真上課/.test(收到)) {
 		event.reply("假的").then(function (data) {
 			console.log('Success', data);
