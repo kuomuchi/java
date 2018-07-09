@@ -41,6 +41,14 @@ bot.on('message', function (event) {
 		});
 	}
 
+	if (收到 == "嘴砲") {if(event.source.userId == me){
+		event.reply("嘿嘿..").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}}
+
 
 
 	if (/java/.test(收到.toLowerCase())) {
@@ -127,6 +135,8 @@ if (收到 === "你會不會玩遊戲") {
 			console.log('Error', error);
 		});
 	}
+
+
 
 if (/認真上課/.test(收到)) {
 	event.reply("假的").then(function (data) {
