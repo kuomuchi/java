@@ -18,8 +18,7 @@ var randomString = function (strings) {
 app.get('/',function(req,res){
     res.send('Hello World!');
 });
-var attack = ["一個人一生只能喝一次岩漿","過了一分鐘，就過了60秒","誰能想的到，這名16歲少女，在四年前，只是一名12歲少女","當你的左臉被人打，那你的左臉就會痛","人被殺，就會死。"];
-var Att = attack[Math.floor(Math.random()*attack.length)];
+
 var 限制 = 0;
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
