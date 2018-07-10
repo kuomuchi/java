@@ -32,8 +32,7 @@ bot.on('message', function (event) {
 	var Att = attack[Math.floor(Math.random()*attack.length)];
 	var test = [01,02,03,04,05,06,07,08,09];
 	var 數字 = test[Math.floor(Math.random()*test.length)];
- 	var 猜數字 = ;
-	
+
 if(收到 == "4321"){
 		答案.pop();
 		答案.push(數字);
