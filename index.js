@@ -50,16 +50,16 @@ if(收到 == "對戰算數"){
 if(End == 3){
 	if(雙人PK算數 <= 49){
 	if((換人+1) % 2 == 0){
-	if(收到 == "1" ||收到 == "2" ||收到 == "3")
+	if(收到 == "1" ||收到 == "22" ||收到 == "333")
 	換人++;
-	event.reply("玩家1："+(""+(收到+雙人PK算數))).then(function (data) {
+	event.reply("玩家1："+(""+(收到.length+雙人PK算數))).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
 	});
-	}else{if(收到 == "1" ||收到 == "2" ||收到 == "3")
+}else{if(收到 == "1" ||收到 == "22" ||收到 == "333")
 	換人++;
-	event.reply("玩家2："+(""+(收到+雙人PK算數))).then(function (data) {
+	event.reply("玩家2："+(""+(收到.length+雙人PK算數))).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
