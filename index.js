@@ -16,7 +16,6 @@ app.get('/',function(req,res){
     res.send('Hello World!');
 });
 
-var 遊戲狀態 = 0;
 var 答案 = [];
 var 限制 = 0;
 app.post('/linewebhook', linebotParser);
@@ -37,7 +36,6 @@ bot.on('message', function (event) {
 if(收到 == "猜數字"){
 		答案.pop();
 		答案.push(數字);
-		遊戲狀態 = 1;
 		event.reply("遊戲開始，猜1~9其中一個數字").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
