@@ -52,14 +52,16 @@ if(End == 3){
 	if((換人+1) % 2 == 0){
 	if(收到 == "1" ||收到 == "22" ||收到 == "333")
 	換人++;
-	event.reply("玩家1："+(""+(收到.length+雙人PK算數))).then(function (data) {
+	雙人PK算數 = 收到.length+雙人PK算數;
+	event.reply("玩家1："+""+雙人PK算數).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
 	});
 }else{if(收到 == "1" ||收到 == "22" ||收到 == "333")
 	換人++;
-	event.reply("玩家2："+(""+(收到.length+雙人PK算數))).then(function (data) {
+	雙人PK算數 = 收到.length+雙人PK算數;
+	event.reply("玩家2："+""雙人PK算數).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
