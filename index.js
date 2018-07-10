@@ -40,7 +40,7 @@ if(收到 == "對戰算數"){
 	End = 3;
 	雙人PK算數 = 0;
 	換人 = 1;
-	event.reply("遊戲開始！兩人的最終目標是唸到50，遊戲剛開始初始值會是0，然後兩人可以說1 or 2 or 3，1,2,3的意思是加多少數字，誰先加到剛開始設定好的數字，誰就贏了。").then(function (data) {
+	event.reply("遊戲開始！兩人的最終目標是唸到50，遊戲剛開始初始值會是0，然後兩人可以說 w or ww or www = w,ww,www的是加多少數字 w = +1, ww = +2, www, = +3，誰先加到剛開始設定好的數字，誰就贏了。").then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
@@ -50,22 +50,22 @@ if(收到 == "對戰算數"){
 if(End == 3){
 	if(雙人PK算數 <= 49){
 	if((換人+1) % 2 == 0){
-	if(收到 == "1" ||收到 == "22" ||收到 == "333")
+	if(收到 == "1" ||收到 == "22" ||收到 == "333"){
 	換人++;
 	雙人PK算數 = 收到.length+雙人PK算數;
 	event.reply("玩家1："+""+雙人PK算數).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
-	});
-}else{if(收到 == "1" ||收到 == "22" ||收到 == "333")
+	});}
+}else{if(收到 == "1" ||收到 == "22" ||收到 == "333"){
 	換人++;
 	雙人PK算數 = 收到.length+雙人PK算數;
 	event.reply("玩家2："+""+雙人PK算數).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
-	});}
+	});}}
 
 }else {
 	if(換人 % 2 == 0){
