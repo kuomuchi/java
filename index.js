@@ -25,7 +25,7 @@ bot.on('message', function (event) {
 	var 髒髒 = Ha[Math.floor(Math.random()*Ha.length)];
 	var me = "U813645541c262fb6d9c967efeb884aeb";
 	var sayIsay = false;
-	var attack = [];
+	var attack = ["你到底在玩什麼啊！！只會送頭！！還不把遊戲刪掉！！","廢物！","你到底有沒有腦啊！","還不跪下來叫聲師父！","一群低智商生物..."];
 	var Att = attack[Math.floor(Math.random()*attack.length)];
 
 	if (收到.toLowerCase() == "wtf"||收到 === "ＷＴＦ") {
@@ -45,7 +45,7 @@ bot.on('message', function (event) {
 	}
 
 	if (收到 == "嘴砲") {if(event.source.userId == me){
-		event.reply("嘿嘿..").then(function (data) {
+		event.reply(Att).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
