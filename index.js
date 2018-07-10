@@ -19,6 +19,8 @@ app.get('/',function(req,res){
 var End = 0;
 var 答案 = [];
 var 限制 = 0;
+var 換人 = 0;
+var 雙人PK算數 = 0;
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
 	var 收到 = event.message.text ;
@@ -32,6 +34,57 @@ bot.on('message', function (event) {
 	var Att = attack[Math.floor(Math.random()*attack.length)];
 	var test = [01,02,03,04,05,06,07,08,09];
 	var 數字 = test[Math.floor(Math.random()*test.length)];
+
+if(收到 == "對戰算數"){
+	End = A1;
+	雙人PK算數 = 0;
+	換人 = 1;
+	event.reply("遊戲開始！兩人的最終目標是唸到50，遊戲剛開始初始值會是0，然後兩人可以說1 or 2 or 3，1,2,3的意思是加多少數字，誰先加到剛開始設定好的數字，誰就贏了。").then(function (data) {
+		console.log('Success', data);
+	}).catch(function (error) {
+		console.log('Error', error);
+	});
+}
+
+
+if(End == A1){
+	if(雙人PK算數 =< 49){
+	if((換人+1) % 2 == 0){
+	if(收到 == "1" ||收到 == "2" ||收到 == "3")
+	換人++;
+	event.reply("玩家1："+(""+(收到+雙人PK算數))).then(function (data) {
+		console.log('Success', data);
+	}).catch(function (error) {
+		console.log('Error', error);
+	});
+	}else{if(收到 == "1" ||收到 == "2" ||收到 == "3")
+	換人++;
+	event.reply("玩家2："+(""+(收到+雙人PK算數))).then(function (data) {
+		console.log('Success', data);
+	}).catch(function (error) {
+		console.log('Error', error);
+	});}
+
+}else {
+	if(換人 % 2 == 0){
+		End = 0;
+		event.reply("玩家2獲勝").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}else{
+		End = 0;
+		event.reply("玩家1獲勝").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+}}
+
+
+
 
 
 if(收到 == "猜數字"){
