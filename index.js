@@ -61,8 +61,7 @@ if(收到 == 1||收到 == 2||收到 == 3||收到 == 4||收到 == 5||收到 == 6|
 	console.log('Error', error);
 });
 }else{
-	event.reply("答對了！答案是:"+答案).then(function (data)
-	遊戲狀態 = 0; {
+	event.reply("答對了！答案是:"+答案).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
