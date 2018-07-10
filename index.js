@@ -38,6 +38,24 @@ if(收到 == "4321"){
 		答案.push(數字);
 }
 
+if(收到 == 01||收到 == 02||收到 == 03||收到 == 04||收到 == 05||收到 == 06||收到 == 07||收到 == 08||收到 == 09){
+	if(收到 != 答案){
+		event.reply("答錯").then(function (data) {
+		console.log('Success', data);
+	}).catch(function (error) {
+		console.log('Error', error);
+	});
+}else{
+	event.reply("答對").then(function (data) {
+	console.log('Success', data);
+}).catch(function (error) {
+	console.log('Error', error);
+});
+}
+
+	}
+}
+
 
 	if (收到 == "1234") {
 		event.reply(""+答案).then(function (data) {
