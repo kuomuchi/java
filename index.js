@@ -71,7 +71,7 @@ if(收到 == 1||收到 == 2||收到 == 3||收到 == 4||收到 == 5||收到 == 6|
 
 
 
-	if (收到 == "1234") {
+	if (收到 == "查看答案") {
 		event.reply(""+答案).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
