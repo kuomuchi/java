@@ -34,7 +34,7 @@ bot.on('message', function (event) {
 	var 數字 = test[Math.floor(Math.random()*test.length)];
  	var 猜數字 = ;
 
-	var 數字_A = ['1', '2', '3','4','5','6','7','8','9']
+	var 數字_A = ['1', '2', '3','4','5','6','7','8','9'];
 
 if(收到 == "4321"){
 		答案.pop();
