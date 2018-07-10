@@ -21,6 +21,7 @@ var 答案 = [];
 var 限制 = 0;
 var 換人 = 0;
 var 雙人PK算數 = 0;
+
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
 	var 收到 = event.message.text ;
@@ -36,7 +37,7 @@ bot.on('message', function (event) {
 	var 數字 = test[Math.floor(Math.random()*test.length)];
 
 if(收到 == "對戰算數"){
-	End = A1;
+	End = 3;
 	雙人PK算數 = 0;
 	換人 = 1;
 	event.reply("遊戲開始！兩人的最終目標是唸到50，遊戲剛開始初始值會是0，然後兩人可以說1 or 2 or 3，1,2,3的意思是加多少數字，誰先加到剛開始設定好的數字，誰就贏了。").then(function (data) {
@@ -47,7 +48,7 @@ if(收到 == "對戰算數"){
 }
 
 
-if(End == A1){
+if(End == 3){
 	if(雙人PK算數 =< 49){
 	if((換人+1) % 2 == 0){
 	if(收到 == "1" ||收到 == "2" ||收到 == "3")
