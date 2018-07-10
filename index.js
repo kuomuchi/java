@@ -32,13 +32,16 @@ bot.on('message', function (event) {
 	var Att = attack[Math.floor(Math.random()*attack.length)];
 	var test = [01,02,03,04,05,06,07,08,09];
 	var 數字 = test[Math.floor(Math.random()*test.length)];
+ 	var 猜數字 = ;
+
+	var 數字_A = ['1', '2', '3','4','5','6','7','8','9']
 
 if(收到 == "4321"){
 		答案.pop();
 		答案.push(數字);
 }
-
-if(收到 == 1||收到 == 2||收到 == 3||收到 == 4||收到 == 5||收到 == 6||收到 == 7||收到 == 8||收到 == 9){
+if (收到.includes(數字_A)) {
+//if(收到 == 1||收到 == 2||收到 == 3||收到 == 4||收到 == 5||收到 == 6||收到 == 7||收到 == 8||收到 == 9){
 	if(收到 < 答案){
 		event.reply("再大一點！").then(function (data) {
 		console.log('Success', data);
