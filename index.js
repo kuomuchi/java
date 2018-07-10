@@ -79,7 +79,7 @@ if(收到 == 1||收到 == 2||收到 == 3||收到 == 4||收到 == 5||收到 == 6|
 		});
 	}
 
-
+if(End == 0){
 
 	if (收到.toLowerCase() == "wtf"||收到 === "ＷＴＦ") {
 		event.reply("Fuck you").then(function (data) {
@@ -490,7 +490,7 @@ if (/吵/.test(收到)) {
 		});
 	}
 
-});
+}});
 
 
 
