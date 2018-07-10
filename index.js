@@ -32,12 +32,12 @@ bot.on('message', function (event) {
 	var attack = ["你到底在玩什麼啊！！只會送頭！！還不把遊戲刪掉！！","廢物！","你到底有沒有腦啊！","還不跪下來叫聲師父！","一群低智商生物..."];
 	var Att = attack[Math.floor(Math.random()*attack.length)];
 
-	function MyID(nu){
-		test.push(nu);
-	}
+var qwer = function LOL (mu){
+	test.push(mu);
+}
 
 
-	if(收到 == MyID(nu)){
+	if(收到== qwer("wtf")){
 		event.reply(test).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
