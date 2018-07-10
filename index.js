@@ -34,8 +34,7 @@ bot.on('message', function (event) {
 	var Att = attack[Math.floor(Math.random()*attack.length)];
 
 	if (收到 == "猜數字") {
-		數字 = 答案;
-		event.reply(答案).then(function (data) {
+		event.reply(數字).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
