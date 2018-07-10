@@ -16,7 +16,7 @@ app.get('/',function(req,res){
     res.send('Hello World!');
 });
 
-
+var 遊戲狀態 = 0;
 var 答案 = [];
 var 限制 = 0;
 app.post('/linewebhook', linebotParser);
@@ -33,11 +33,20 @@ bot.on('message', function (event) {
 	var test = [01,02,03,04,05,06,07,08,09];
 	var 數字 = test[Math.floor(Math.random()*test.length)];
 
-if(收到 == "4321"){
+
+if(收到 == "猜數字"){
 		答案.pop();
 		答案.push(數字);
+		遊戲狀態 = 1;
+		event.reply("遊戲開始，猜1~9其中一個數字").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
 }
 
+if(遊戲狀態 = 1){
 if(收到 == 1||收到 == 2||收到 == 3||收到 == 4||收到 == 5||收到 == 6||收到 == 7||收到 == 8||收到 == 9){
 	if(收到 < 答案){
 		event.reply("再大一點！").then(function (data) {
@@ -52,11 +61,13 @@ if(收到 == 1||收到 == 2||收到 == 3||收到 == 4||收到 == 5||收到 == 6|
 	console.log('Error', error);
 });
 }else{
-	event.reply("答對了！答案是:"+答案).then(function (data) {
+	event.reply("答對了！答案是:"+答案).then(function (data)
+	遊戲狀態 = 0; {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
-	});}}
+
+	});}}}
 
 
 
