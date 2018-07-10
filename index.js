@@ -34,6 +34,7 @@ bot.on('message', function (event) {
 	var 數字 = test[Math.floor(Math.random()*test.length)];
 
 if(收到 == "4321"){
+		答案.pop();
 		答案.push(數字);
 }
 
