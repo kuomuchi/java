@@ -36,7 +36,8 @@ bot.on('message', function (event) {
 
 
 	if (收到 == "猜數字") {
-		event.reply(""+數字).then(function (data) {
+		答案.push(數字);
+		event.reply(答案).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
