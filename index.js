@@ -142,6 +142,15 @@ if (收到 === "你會不會玩遊戲") {
 			console.log('Error', error);
 		});
 	}
+
+	if (/復活/.test(收到)) {
+		event.reply("吼～～～").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
 	if (收到 == "ok"||/ok./.test(收到)) {
 		event.reply("不ok！").then(function (data) {
 			console.log('Success', data);
