@@ -53,7 +53,7 @@ if(End == 3){
 	if(收到 == "w" ||收到 == "ww" ||收到 == "www"){
 	換人++;
 	雙人PK算數 = 收到.length+雙人PK算數;
-	event.reply("玩家1："+""+雙人PK算數).then(function (data) {
+	event.reply("玩家1喊："+""+雙人PK算數).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
@@ -61,7 +61,7 @@ if(End == 3){
 }else{if(收到 == "w" ||收到 == "ww" ||收到 == "www"){
 	換人++;
 	雙人PK算數 = 收到.length+雙人PK算數;
-	event.reply("玩家2："+""+雙人PK算數).then(function (data) {
+	event.reply("玩家2喊："+""+雙人PK算數).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
@@ -70,14 +70,14 @@ if(End == 3){
 }else {
 	if(換人 % 2 == 0){
 		End = 0;
-		event.reply("玩家2獲勝").then(function (data) {
+		event.reply("玩家1獲勝").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
 		});
 	}else{
 		End = 0;
-		event.reply("玩家1獲勝").then(function (data) {
+		event.reply("玩家2獲勝").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
