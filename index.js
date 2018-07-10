@@ -35,11 +35,8 @@ bot.on('message', function (event) {
 	var 答案 = [];
 
 
-	if (收到 == "猜數字") {
-		答案.push(數字);
-}
-
 	if (收到 == "1234") {
+		答案.push(數字);
 		event.reply(""+答案).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
