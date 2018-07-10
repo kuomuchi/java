@@ -17,7 +17,7 @@ app.get('/',function(req,res){
 });
 
 
-
+var 答案 = [];
 var 限制 = 0;
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
@@ -32,11 +32,13 @@ bot.on('message', function (event) {
 	var Att = attack[Math.floor(Math.random()*attack.length)];
 	var test = [1,2,3,4,5,6,7,8,9];
 	var 數字 = test[Math.floor(Math.random()*test.length)];
-	var 答案 = [];
+
+if(收到 == "4321"){
+		答案.push(數字);
+}
 
 
 	if (收到 == "1234") {
-		答案.push(數字);
 		event.reply(""+答案).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
