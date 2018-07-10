@@ -34,9 +34,9 @@ bot.on('message', function (event) {
 	var 數字 = test[Math.floor(Math.random()*test.length)];
 	var 答案 = [];
 
-	
+
 	if (收到 == "猜數字") {
-		event.reply(數字).then(function (data) {
+		event.reply(""+數字).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
