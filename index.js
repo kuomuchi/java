@@ -108,7 +108,7 @@ if(End == 5){
 	});}}
 }else{
 	if(收到.toLowerCase() == "w" ||收到.toLowerCase() == "ww" ||收到.toLowerCase() == "www"){
-	if)(event.source.userId = 玩家2){
+	if(event.source.userId = 玩家2){
 	換人++;
 	雙人PK算數 = 收到.length+雙人PK算數;
 	event.reply("玩家2喊："+""+雙人PK算數).then(function (data) {
