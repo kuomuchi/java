@@ -74,8 +74,8 @@ if(End == 3){
 
 if(End == 4){
 	if (收到.toLowerCase() == "i2") {
-		End = 5;
 		if(event.source.userId != 玩家1){
+		End = 5;
 		玩家2.push(event.source.userId)
 		event.reply("收到").then(function (data) {
 			console.log('Success', data);
