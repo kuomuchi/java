@@ -60,8 +60,8 @@ if(End == 3||End == 4||End == 5){
 
 
 if(End == 3){
-	End = 4;
 	if (收到.toLowerCase() == "i1") {
+		End = 4;
 		玩家1.push(event.source.userId)
 		event.reply("收到").then(function (data) {
 			console.log('Success', data);
