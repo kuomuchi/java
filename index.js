@@ -105,7 +105,13 @@ if(End == 5){
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
-	});}}
+	});}else{
+		event.reply("嚴禁局外人").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}}
 }else{
 	if(收到.toLowerCase() == "w" ||收到.toLowerCase() == "ww" ||收到.toLowerCase() == "www"){
 	if(event.source.userId = 玩家2){
@@ -115,7 +121,13 @@ if(End == 5){
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
-	});}}}
+	});}else{
+		event.reply("嚴禁局外人").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}}}
 
 }else {
 	if(換人 % 2 == 0){
