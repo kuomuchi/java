@@ -63,7 +63,7 @@ if(End == 3){
 	if (收到.toLowerCase() == "i1") {
 		End = 4;
 		玩家1.push(event.source.userId)
-		event.reply("收到").then(function (data) {
+		event.reply(玩家1).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
@@ -77,7 +77,7 @@ if(End == 4){
 		End = 5;
 		if(event.source.userId != 玩家1){
 		玩家2.push(event.source.userId)
-		event.reply("收到").then(function (data) {
+		event.reply(玩家2).then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
