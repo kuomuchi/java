@@ -53,13 +53,14 @@ if(收到 == "對戰算數"){
 }
 
 if(End == 3||End == 4||End == 5){
-	if(收到==GG){
+	if(收到 == GG){
 		End == 0;
 	}
 }
 
 
 if(End == 3){
+	End = 4;
 	if (收到.toLowerCase() == "i1") {
 		player1.push(event.source.userId)
 		event.reply("收到").then(function (data) {
