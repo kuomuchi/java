@@ -54,14 +54,21 @@ if(收到 == "對戰算數"){
 
 if(End == 3||End == 4||End == 5){
 	if(收到.toLowerCase() === "gg"){
+		if(event.source.userId == 玩家1||event.source.userId == 玩家2||event.source.userId == me){
 		End = 0;
 		event.reply("遊戲結束").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
 		});
+	}else{
+		event.reply("你沒參與遊戲，fuck you").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
 	}
-}
+}}
 
 
 if(End == 3){
