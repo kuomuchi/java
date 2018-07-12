@@ -98,7 +98,7 @@ if(End == 5){
 	if(雙人PK算數 <= 34){
 	if((換人+1) % 2 == 0){
 	if(收到.toLowerCase() == "w" ||收到.toLowerCase() == "ww" ||收到.toLowerCase() == "www"){
-		if(event.source.userId == 玩家1){
+		if(event.source.userId = 玩家1){
 	換人++;
 	雙人PK算數 = 收到.length+雙人PK算數;
 	event.reply("玩家1喊："+""+雙人PK算數).then(function (data) {
@@ -108,7 +108,7 @@ if(End == 5){
 	});}}
 }else{
 	if(收到.toLowerCase() == "w" ||收到.toLowerCase() == "ww" ||收到.toLowerCase() == "www"){
-	if)(event.source.userId == 玩家2){
+	if)(event.source.userId = 玩家2){
 	換人++;
 	雙人PK算數 = 收到.length+雙人PK算數;
 	event.reply("玩家2喊："+""+雙人PK算數).then(function (data) {
