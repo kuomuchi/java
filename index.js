@@ -21,6 +21,9 @@ var 答案 = [];
 var 限制 = 0;
 var 換人 = 0;
 var 雙人PK算數 = 0;
+var player1 =[];
+var player2 =[];
+
 
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
@@ -40,32 +43,79 @@ if(收到 == "對戰算數"){
 	End = 3;
 	雙人PK算數 = 0;
 	換人 = 1;
-	event.reply("遊戲開始！兩人的最終目標是唸到50，遊戲剛開始初始值會是0，然後兩人可以說 w or ww or www = w,ww,www的是加多少數字 w = +1, ww = +2, www, = +3，誰先加到剛開始設定好的數字，誰就贏了。").then(function (data) {
+	player1.pop();
+	player2.pop();
+	event.reply("遊戲開始！兩人的最終目標是唸到35，遊戲剛開始初始值會是0，然後兩人可以說 w or ww or www = w,ww,www的是加多少數字 w = +1, ww = +2, www, = +3，誰先加到剛開始設定好的數字，誰就贏了。\n 說『i1』成為Player 1,『然後在』說『i2』成為Player 2\n如果等不到人玩遊戲，或者是想要結束，可以說『gg』來結束遊戲" ).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
 	});
 }
 
+if(End == 3||End == 4||End == 5){
+	if(收到==GG){
+		End == 0;
+	}
+}
+
+
 if(End == 3){
-	if(雙人PK算數 <= 49){
+	if (收到.toLowerCase() == i1) {
+		player1.push(event.source.userId)
+		event.reply("收到").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+}
+
+
+if(End == 4){
+	if (收到.toLowerCase() == i2) {
+		End = 5;
+		if(event.source.userId != player1){
+		player2.push(event.source.userId)
+		event.reply("收到").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}else{
+		if(event.source.userId != player1){
+		player2.push(event.source.userId)
+		event.reply("不能重複").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+}}
+
+
+
+
+if(End == 5){
+	if(雙人PK算數 <= 34){
 	if((換人+1) % 2 == 0){
-	if(收到 == "w" ||收到 == "ww" ||收到 == "www"){
+	if(收到.toLowerCase() == "w" ||收到.toLowerCase() == "ww" ||收到.toLowerCase() == "www"){
+		if(event.source.userId == player1){
 	換人++;
 	雙人PK算數 = 收到.length+雙人PK算數;
 	event.reply("玩家1喊："+""+雙人PK算數).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
-	});}
-}else{if(收到 == "w" ||收到 == "ww" ||收到 == "www"){
+	});}}
+}else{if(收到.toLowerCase() == "w" ||收到.toLowerCase() == "ww" ||收到.toLowerCase() == "www"){
+	if)(event.source.userId == player2){
 	換人++;
 	雙人PK算數 = 收到.length+雙人PK算數;
 	event.reply("玩家2喊："+""+雙人PK算數).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
-	});}}
+	});}}}
 
 }else {
 	if(換人 % 2 == 0){
