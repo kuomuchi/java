@@ -53,8 +53,8 @@ if(收到 == "對戰算數"){
 }
 
 if(End == 3||End == 4||End == 5){
-	if(收到.toLowerCase() == "gg"){
-		End == 0;
+	if(收到.toLowerCase() === "gg"){
+		End = 0;
 	}
 }
 
