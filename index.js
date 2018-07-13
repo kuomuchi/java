@@ -23,6 +23,26 @@ var 換人 = 0;
 var 雙人PK算數 = 0;
 var 玩家1 =[];
 var 玩家2 =[];
+var 玩家數 = 0;
+
+var 狼人玩家1[];
+var 狼人玩家2[];
+var 狼人玩家3[];
+var 狼人玩家4[];
+var 狼人玩家5[];
+var 狼人玩家6[];
+var 狼人玩家7[];
+var 狼人玩家8[];
+var 狼人玩家9[];
+var 狼人玩家10[];
+var 狼人玩家11[];
+var 狼人玩家12[];
+var 狼人玩家13[];
+var 狼人玩家14[];
+var 狼人玩家15[];
+
+
+
 
 
 app.post('/linewebhook', linebotParser);
@@ -38,6 +58,79 @@ bot.on('message', function (event) {
 	var Att = attack[Math.floor(Math.random()*attack.length)];
 	var test = [01,02,03,04,05,06,07,08,09];
 	var 數字 = test[Math.floor(Math.random()*test.length)];
+
+
+
+if(收到 == "狼人game"){
+	End = 6;
+	event.reply("在遊戲開始前，會『先』設定有多少人要玩，至少7人~最多12人，然後每個玩家都要說一個數字，這個數字就是代表自己的號碼，假如只有1~3號，那要玩的三個玩家就要分別說1 or 2 or 3，沒辦法重複，這三個號碼都被認領之後遊戲才會開始。").then(function (data) {
+		console.log('Success', data);
+	}).catch(function (error) {
+		console.log('Error', error);ybh
+	});
+}
+
+if(End == 6){
+	if(收到 =="7"||收到 =="8"||收到 =="9"||收到 =="10"||收到 =="11"||收到 =="12"){
+		End = 收到;
+		玩家數 = 0;
+	}else{
+		event.reply("錯誤，請再輸入一次『人數』。").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+}
+
+if(End == 7){
+	if(收到 == "1"||收到 == "2"||收到 == "3"||收到 == "4"||收到 == "5"||收到 == "6"||收到 == "7")
+	玩家數++
+	if(收到 == "1"){
+玩家1.push(event.source.userId);
+}
+	if(收到 == "2"){
+玩家2.push(event.source.userId);
+}
+	if(收到 == "3"){
+玩家3.push(event.source.userId);
+}
+	if(收到 == "4"){
+玩家4.push(event.source.userId);
+}
+	if(收到 == "5"){
+玩家5.push(event.source.userId);
+}
+	if(收到 == "6"){
+玩家6.push(event.source.userId);
+}
+	if(收到 == "7"){
+玩家7.push(event.source.userId);
+}
+	event.reply("玩家"+收到+"確認").then(function (data) {
+		console.log('Success', data);
+	}).catch(function (error) {
+		console.log('Error', error);
+	});
+}
+if(End == 8){}
+if(End == 9){}
+if(End == 10){}
+if(End == 11){}
+if(End == 12){}
+
+if(End != 13){
+	if(End == 玩家數){
+	End = 13;
+	event.reply("遊戲開始，開始分發職業。").then(function (data) {
+		console.log('Success', data);
+	}).catch(function (error) {
+		console.log('Error', error);
+	});
+	}
+}
+
+
 
 if(收到 == "對戰算數"){
 	End = 3;
@@ -176,7 +269,7 @@ if(收到 == "猜數字"){
 
 
 if(End == 1){
-if(收到 == 1||收到 == 2||收到 == 3||收到 == 4||收到 == 5||收到 == 6||收到 == 7||收到 == 8||收到 == 9){
+if(/[1-9]/.test(收到)){
 	if(收到 < 答案){
 		event.reply("再大一點！").then(function (data) {
 		console.log('Success', data);
