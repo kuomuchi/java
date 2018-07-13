@@ -121,7 +121,7 @@ if(End == 10){}
 if(End == 11){}
 if(End == 12){}
 
-if(/^[7-12]$/.test(End)){
+if(End == 7||End == 8||End == 9||End == 10||End == 11||End == 12){
 	if(End == 玩家數){
 	End = 13;
 	event.reply("遊戲開始，開始分發職業。").then(function (data) {
