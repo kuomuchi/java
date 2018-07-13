@@ -43,7 +43,10 @@ var 狼人玩家13=[];
 var 狼人玩家14=[];
 var 狼人玩家15=[];
 
-var 加 = 1;
+
+
+
+
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
 	var 收到 = event.message.text ;
@@ -55,14 +58,10 @@ bot.on('message', function (event) {
 	var sayIsay = false;
 	var attack = ["你到底在玩什麼啊！！只會送頭！！還不把遊戲刪掉！！","廢物！","你到底有沒有腦啊！","還不跪下來叫聲師父！","一群低智商生物..."];
 	var Att = attack[Math.floor(Math.random()*attack.length)];
-	var test = [];
+	var test = [01,02,03,04,05,06,07,08,09];
 	var 數字 = test[Math.floor(Math.random()*test.length)];
 	var 七人職業 = 七人[Math.floor(Math.random()*七人.length)];
 
-if(加 <=199){
-	test.push(加);
-	加++
-}
 
 if(收到 == "狼人game"){
 	End = 6;
@@ -288,7 +287,7 @@ if(收到 == "猜數字"){
 		答案.pop();
 		答案.push(數字);
 		End = 1;
-		event.reply("遊戲開始，猜1~200其中一個數字").then(function (data) {
+		event.reply("遊戲開始，猜1~9其中一個數字").then(function (data) {
 			console.log('Success', data);
 		}).catch(function (error) {
 			console.log('Error', error);
@@ -297,7 +296,7 @@ if(收到 == "猜數字"){
 
 
 if(End == 1){
-if(/^[1-200]$/.test(收到)){
+if(/^[1-9]$/.test(收到)){
 	if(收到 < 答案){
 		event.reply("再大一點！").then(function (data) {
 		console.log('Success', data);
