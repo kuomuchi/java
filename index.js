@@ -16,6 +16,7 @@ app.get('/',function(req,res){
     res.send('Hello World!');
 });
 
+function CL(arr, el) { arr.splice(arr.indexOf(el), 1); return arr; }
 var End = 0;
 var 答案 = [];
 var 限制 = 0;
@@ -24,6 +25,7 @@ var 雙人PK算數 = 0;
 var 玩家1 =[];
 var 玩家2 =[];
 var 玩家數 = 0;
+var 七人 = ["平民","平民","平民","獵人","狼人","狼人","預言家"];
 
 var 狼人玩家1[];
 var 狼人玩家2[];
@@ -58,7 +60,7 @@ bot.on('message', function (event) {
 	var Att = attack[Math.floor(Math.random()*attack.length)];
 	var test = [01,02,03,04,05,06,07,08,09];
 	var 數字 = test[Math.floor(Math.random()*test.length)];
-
+	var 七人職業 = 七人[Math.floor(Math.random()*七人.length)];
 
 
 if(收到 == "狼人game"){
@@ -129,6 +131,31 @@ if(End != 13){
 	});
 	}
 }
+
+if(End == 13){
+	狼人玩家1.push(七人職業);
+CL(七人,狼人玩家1[1]);
+bot.push(狼人玩家1[0],"你的職業是"+狼人玩家1[1]);
+	狼人玩家2.push(七人職業);
+CL(七人,狼人玩家1[1]);
+bot.push(狼人玩家2[0],"你的職業是"+狼人玩家2[1]);
+	狼人玩家3.push(七人職業);
+CL(七人,狼人玩家1[1]);
+bot.push(狼人玩家3[0],"你的職業是"+狼人玩家3[1]);
+	狼人玩家4.push(七人職業);
+CL(七人,狼人玩家1[1]);
+bot.push(狼人玩家4[0],"你的職業是"+狼人玩家4[1]);
+	狼人玩家5.push(七人職業);
+CL(七人,狼人玩家1[1]);
+bot.push(狼人玩家5[0],"你的職業是"+狼人玩家5[1]);
+	狼人玩家6.push(七人職業);
+CL(七人,狼人玩家1[1]);
+bot.push(狼人玩家6[0],"你的職業是"+狼人玩家6[1]);
+	狼人玩家7.push(七人職業);
+CL(七人,狼人玩家1[1]);
+bot.push(狼人玩家7[0],"你的職業是"+狼人玩家7[1]);
+}
+
 
 
 
@@ -269,7 +296,7 @@ if(收到 == "猜數字"){
 
 
 if(End == 1){
-if(收到 == 1||收到 == 2||收到 == 3||收到 == 4||收到 == 5||收到 == 6||收到 == 7||收到 == 8||收到 == 9){
+if(/^[1-9]$/.test(收到)){
 	if(收到 < 答案){
 		event.reply("再大一點！").then(function (data) {
 		console.log('Success', data);
@@ -719,7 +746,7 @@ if (/吵/.test(收到)) {
 
 bot.on("follow", function (event) {
   event.reply("你好！謝謝你加我好友 :D");
-  bot.push(owner, "有人加我好友耶！\n我的朋友有一天會比你多的 >:D");
+  bot.push(me, "有人加我好友耶！\n我的朋友有一天會比你多的 >:D");
 });
 
 
