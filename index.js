@@ -43,12 +43,7 @@ var 狼人玩家13=[];
 var 狼人玩家14=[];
 var 狼人玩家15=[];
 
-for(var E=0; E==200; E++){
-	test.push(E);
-}
-
-
-
+var 加 = 1;
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
 	var 收到 = event.message.text ;
@@ -64,6 +59,10 @@ bot.on('message', function (event) {
 	var 數字 = test[Math.floor(Math.random()*test.length)];
 	var 七人職業 = 七人[Math.floor(Math.random()*七人.length)];
 
+if(加 <=199){
+	test.push(加);
+	加++
+}
 
 if(收到 == "狼人game"){
 	End = 6;
