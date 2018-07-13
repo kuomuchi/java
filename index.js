@@ -43,7 +43,9 @@ var 狼人玩家13=[];
 var 狼人玩家14=[];
 var 狼人玩家15=[];
 
-
+for(var E=0; E==200; E++){
+	test.push(E);
+}
 
 
 
@@ -59,9 +61,6 @@ bot.on('message', function (event) {
 	var attack = ["你到底在玩什麼啊！！只會送頭！！還不把遊戲刪掉！！","廢物！","你到底有沒有腦啊！","還不跪下來叫聲師父！","一群低智商生物..."];
 	var Att = attack[Math.floor(Math.random()*attack.length)];
 	var test = [];
-	for(var E=0; E==200; E++){
-		test.push(E);
-	}
 	var 數字 = test[Math.floor(Math.random()*test.length)];
 	var 七人職業 = 七人[Math.floor(Math.random()*七人.length)];
 
