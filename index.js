@@ -87,25 +87,25 @@ if(End == 7){
 	if(收到 == "1"||收到 == "2"||收到 == "3"||收到 == "4"||收到 == "5"||收到 == "6"||收到 == "7")
 	玩家數++
 	if(收到 == "1"){
-玩家1.push(event.source.userId);
+狼人玩家1.push(event.source.userId);
 }
 	if(收到 == "2"){
-玩家2.push(event.source.userId);
+狼人玩家2.push(event.source.userId);
 }
 	if(收到 == "3"){
-玩家3.push(event.source.userId);
+狼人玩家3.push(event.source.userId);
 }
 	if(收到 == "4"){
-玩家4.push(event.source.userId);
+狼人玩家4.push(event.source.userId);
 }
 	if(收到 == "5"){
-玩家5.push(event.source.userId);
+狼人玩家5.push(event.source.userId);
 }
 	if(收到 == "6"){
-玩家6.push(event.source.userId);
+狼人玩家6.push(event.source.userId);
 }
 	if(收到 == "7"){
-玩家7.push(event.source.userId);
+狼人玩家7.push(event.source.userId);
 }
 	event.reply("玩家"+收到+"確認").then(function (data) {
 		console.log('Success', data);
@@ -269,7 +269,7 @@ if(收到 == "猜數字"){
 
 
 if(End == 1){
-if(/[1-9]/.test(收到)){
+if(收到 == 1||收到 == 2||收到 == 3||收到 == 4||收到 == 5||收到 == 6||收到 == 7||收到 == 8||收到 == 9){
 	if(收到 < 答案){
 		event.reply("再大一點！").then(function (data) {
 		console.log('Success', data);
