@@ -26,6 +26,8 @@ var 玩家1 =[];
 var 玩家2 =[];
 var 玩家數 = 0;
 var 七人 = ["平民","平民","平民","獵人","狼人","狼人","預言家"];
+var 剪刀石頭布 = [];
+
 
 var 狼人玩家1=[];
 var 狼人玩家2=[];
@@ -61,6 +63,9 @@ bot.on('message', function (event) {
 	var test = [01,02,03,04,05,06,07,08,09];
 	var 數字 = test[Math.floor(Math.random()*test.length)];
 	var 七人職業 = 七人[Math.floor(Math.random()*七人.length)];
+	var 電腦猜拳 = ["剪刀","石頭","布"];
+	var 對決 = 電腦猜拳[Math.floor(Math.random()*電腦猜拳.length)]
+
 
 
 if(收到 == "狼人game"){
@@ -124,7 +129,7 @@ if(End == 12){}
 if(End == 7||End == 8||End == 9||End == 10||End == 11||End == 12){
 	if(End == 玩家數){
 	End = 13;
-	event.reply("遊戲開始，開始分發職業。").then(function (data) {
+	event.reply("開始分發職業。").then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
@@ -156,6 +161,121 @@ CL(七人,狼人玩家1[1]);
 bot.push(狼人玩家7[0],"你的職業是"+狼人玩家7[1]);
 }
 
+
+
+if(End == 13){
+	event.reply("遊戲開始，如果你是狼人，你只要讓所有人出局你就贏了，").then(function (data) {
+		console.log('Success', data);
+	}).catch(function (error) {
+		console.log('Error', error);
+	});
+	if(){
+
+	}
+}
+
+
+
+if (收到 == "猜拳") {
+	End = Q;
+	剪刀石頭布.pop()
+	剪刀石頭布.push(對決)
+	event.reply("開始！\說『剪刀』、『石頭』、『布』").then(function (data) {
+		console.log('Success', data);
+	}).catch(function (error) {
+		console.log('Error', error);
+	});
+}
+
+if(End == Q){
+	if(收到 == "剪刀"||收到 == "石頭"||收到 == "布"){
+	if(收到 == "剪刀"){
+
+	 if(對決 == "剪刀"){
+		 End = 0;
+		 event.reply("平手").then(function (data) {
+			 console.log('Success', data);
+		 }).catch(function (error) {
+			 console.log('Error', error);
+		 });
+	 }
+	 if(對決 == "石頭"){
+		 End = 0;
+		 event.reply("你輸啦！！ 哈哈！！").then(function (data) {
+			 console.log('Success', data);
+		 }).catch(function (error) {
+			 console.log('Error', error);
+		 });
+	 }
+	 if(對決 == "布"){
+		 End = 0;
+		 event.reply("你贏了恭喜！\n密碼是\n『』").then(function (data) {
+			 console.log('Success', data);
+		 }).catch(function (error) {
+			 console.log('Error', error);
+		 });
+	 }
+
+
+	}else if(收到 == "石頭"){
+
+		if(對決 == "剪刀"){
+			End = 0;
+			event.reply("你贏了恭喜！\n密碼是\n『』").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+		if(對決 == "石頭"){
+			End = 0;
+			event.reply("平手").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+		if(對決 == "布"){
+			End = 0;
+			event.reply("你輸啦！！ 哈哈！！").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+
+
+	}else{
+
+		if(對決 == "剪刀"){
+			End = 0;
+			event.reply("你輸了！！哈哈！！").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+		if(對決 == "石頭"){
+			End = 0;
+			event.reply("你輸啦！！ 哈哈！！").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+		if(對決 == "布"){
+			End = 0;
+			event.reply("平手").then(function (data) {
+				console.log('Success', data);
+			}).catch(function (error) {
+				console.log('Error', error);
+			});
+		}
+
+	}
+
+}
+}
 
 
 
@@ -478,6 +598,7 @@ if (/吵/.test(收到)) {
 	}
 
 
+
 	if (收到 == "好喔"||收到 == "好") {
 		event.reply("不好！！").then(function (data) {
 			console.log('Success', data);
@@ -485,6 +606,9 @@ if (/吵/.test(收到)) {
 			console.log('Error', error);
 		});
 	}
+
+
+
 
 	if (/恩/.test(收到)) {
 		event.reply("恩？").then(function (data) {
