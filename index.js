@@ -180,7 +180,7 @@ if (收到 == "猜拳") {
 	End = "Q";
 	剪刀石頭布.pop()
 	剪刀石頭布.push(對決)
-	event.reply("開始！\n 說：『剪刀』、『石頭』、『布』").then(function (data) {
+	event.reply("開始！ 說：『剪刀』、『石頭』、『布』").then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
@@ -209,7 +209,7 @@ if(End == "Q"){
 	 }
 	 if(對決 == "布"){
 		 End = 0;
-		 event.reply("你贏了恭喜！\n密碼是\n『』").then(function (data) {
+		 event.reply("你贏了恭喜！密碼是『』").then(function (data) {
 			 console.log('Success', data);
 		 }).catch(function (error) {
 			 console.log('Error', error);
@@ -221,7 +221,7 @@ if(End == "Q"){
 
 		if(對決 == "剪刀"){
 			End = 0;
-			event.reply("你贏了恭喜！\n密碼是\n『』").then(function (data) {
+			event.reply("你贏了恭喜！密碼是『』").then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
 				console.log('Error', error);
@@ -257,7 +257,7 @@ if(End == "Q"){
 		}
 		if(對決 == "石頭"){
 			End = 0;
-			event.reply("你輸啦！！ 哈哈！！").then(function (data) {
+			event.reply("你贏了恭喜！密碼是『』").then(function (data) {
 				console.log('Success', data);
 			}).catch(function (error) {
 				console.log('Error', error);
