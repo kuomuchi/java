@@ -180,7 +180,7 @@ if (收到 == "猜拳") {
 	End = Q;
 	剪刀石頭布.pop()
 	剪刀石頭布.push(對決)
-	event.reply("開始！\說『剪刀』、『石頭』、『布』").then(function (data) {
+	event.reply("開始！\n 說：『剪刀』、『石頭』、『布』").then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
