@@ -458,6 +458,11 @@ bot.on('message', function(event) {
           });
         }
 
+
+
+
+
+
         if (End == 0) {
 
           if (收到.toLowerCase() == "wtf" || 收到 === "ＷＴＦ") {
