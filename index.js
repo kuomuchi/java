@@ -169,10 +169,7 @@ if(End == 13){
 	}).catch(function (error) {
 		console.log('Error', error);
 	});
-	if(){
-
-	}
-}
+	
 
 
 
