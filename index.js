@@ -64,7 +64,7 @@ bot.on('message', function (event) {
 
 
 
-if(收到 == "狼人gamegame"){
+if(收到 == "狼人game"){
 	End = 6;
 	event.reply("在遊戲開始前，會『先』設定有多少人要玩，至少7人~最多12人，然後每個玩家都要說一個數字，這個數字就是代表自己的號碼，假如只有1~3號，那要玩的三個玩家就要分別說1 or 2 or 3，沒辦法重複，這三個號碼都被認領之後遊戲才會開始。").then(function (data) {
 		console.log('Success', data);
@@ -160,11 +160,15 @@ bot.push(狼人玩家7[0],"你的職業是"+狼人玩家7[1]);
 
 
 if(End == 13){
-	event.reply("遊戲開始，如果你是狼人，你只要讓所有人出局你就贏了，").then(function (data) {
+	event.reply("遊戲開始，如果你是殺手，你只要讓所有人出局你就贏了，").then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
 	});
+	if(){
+
+	}
+}
 
 
 
@@ -488,7 +492,6 @@ if (/吵/.test(收到)) {
 	}
 
 
-
 	if (收到 == "好喔"||收到 == "好") {
 		event.reply("不好！！").then(function (data) {
 			console.log('Success', data);
@@ -496,9 +499,6 @@ if (/吵/.test(收到)) {
 			console.log('Error', error);
 		});
 	}
-
-
-
 
 	if (/恩/.test(收到)) {
 		event.reply("恩？").then(function (data) {
@@ -753,7 +753,7 @@ if (/吵/.test(收到)) {
 		});
 	}
 
-}}});
+}});
 
 
 
