@@ -177,7 +177,7 @@ bot.on('message', function(event) {
 
 
         if (收到 == "猜拳") {
-          End = "Q";
+          End = 100;
           剪刀石頭布.pop()
           剪刀石頭布.push(對決)
           event.reply("開始！ 說：『剪刀』、『石頭』、『布』").then(function(data) {
@@ -187,7 +187,7 @@ bot.on('message', function(event) {
           });
         }
 
-        if (End == "Q") {
+        if (End == 100) {
           if (收到 == "剪刀" || 收到 == "石頭" || 收到 == "布") {
             if (收到 == "剪刀") {
 
