@@ -169,12 +169,12 @@ if(End == 13){
 	}).catch(function (error) {
 		console.log('Error', error);
 	});
-	
+
 
 
 
 if (收到 == "猜拳") {
-	End = "Q";
+	 End = "Q";
 	剪刀石頭布.pop()
 	剪刀石頭布.push(對決)
 	event.reply("開始！ 說：『剪刀』、『石頭』、『布』").then(function (data) {
