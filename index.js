@@ -1,10 +1,31 @@
 const linebot = require('linebot');
 const express = require('express');
+const readline = require("readline");
+
+const ask = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+var channelId = "";
+var channelSecret = "";
+var channelAccessToken = "";
+
+ask.question("CHANNEL_ID?: ", (answer) => {
+	channelId = answer;
+  ask.question("CHANNEL_SECRET?: ", (answer) => {
+		channelSecret = answer;
+		ask.question("CHANNEL_ACCESS_TOKEN: ", (answer) => {
+			channelAccessToken = answer;
+	  })
+  })
+})
+
 
 const bot = linebot({
-	channelId: process.env.CHANNEL_ID,
-	channelSecret: process.env.CHANNEL_SECRET,
-	channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
+	channelId: channelId,
+	channelSecret: channelSecret,
+	channelAccessToken: channelAccessToken
 });
 
 const app = express();
@@ -653,7 +674,7 @@ if (/吵/.test(收到)) {
 
 
 bot.on("follow", function (event) {
-  event.reply("你好！謝謝你加我好友 :D");
+  event.reply("你好！");
   bot.push(me, "有人加我好友耶！\n我的朋友有一天會比你多的 >:D");
 });
 
