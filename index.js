@@ -1,31 +1,10 @@
 const linebot = require('linebot');
 const express = require('express');
-const readline = require("readline");
-
-const ask = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-var channelId = "";
-var channelSecret = "";
-var channelAccessToken = "";
-
-ask.question("CHANNEL_ID?: ", (answer) => {
-	channelId = answer;
-  ask.question("CHANNEL_SECRET?: ", (answer) => {
-		channelSecret = answer;
-		ask.question("CHANNEL_ACCESS_TOKEN: ", (answer) => {
-			channelAccessToken = answer;
-	  })
-  })
-})
-
 
 const bot = linebot({
-	channelId: channelId,
-	channelSecret: channelSecret,
-	channelAccessToken: channelAccessToken
+	channelId: process.env.CHANNEL_ID,
+	channelSecret: process.env.CHANNEL_SECRET,
+	channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 });
 
 const app = express();
