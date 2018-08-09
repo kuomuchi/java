@@ -2,19 +2,20 @@ const linebot = require('linebot');
 const express = require('express');
 
 const bot = linebot({
-	channelId: process.env.CHANNEL_ID,
-	channelSecret: process.env.CHANNEL_SECRET,
-	channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
+	channelId: "1592045256",
+	channelSecret: "0482f74e803017ff1f0d2ccb97fad079",
+	channelAccessToken: "uZcmX22GDoNMCQHfJkqErCRQamOgt14kiAGA8lGYXJy+ESNle7wHzXPP6fxz+e0M8wDXZQDLTn89mm15PWb+i5BSC1iYpQPJbjfeZpjV6AxSdiQII1X4v+Cjiv2tczLhj4r1pq4MCKhec6gNq5mpzwdB04t89/1O/w1cDnyilFU="
 });
 
 const app = express();
 
-const linebotParser = bot.parser();
-
-
 app.get('/',function(req,res){
     res.send('Hello World!');
 });
+
+
+const linebotParser = bot.parser();
+
 
 function CL(arr, el) { arr.splice(arr.indexOf(el), 1); return arr; }
 var End = 0;
@@ -671,6 +672,6 @@ setTimeout(function(){
   bot.push("U813645541c262fb6d9c967efeb884aeb", "啟動了！")
 }, 0)
 
-app.listen(process.env.PORT || 80, function () {
+app.listen(process.env.PORT || 3030, function () {
 	console.log('LineBot is running.');
 });
