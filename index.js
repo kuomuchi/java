@@ -3,9 +3,11 @@ const express = require('express');
 const LOL = require('./config.json');
 
 const bot = linebot({
+
 	channelId:LOL.channel_Id,
 	channelSecret:LOL.channel_Secret,
 	channelAccessToken:LOL.channel_AccessToken
+
 });
 
 const app = express();
@@ -13,6 +15,11 @@ const app = express();
 app.get('/',function(req,res){
     res.send('Hello World!');
 });
+
+
+
+const linebotParser = bot.parser();
+
 
 
 const linebotParser = bot.parser();
