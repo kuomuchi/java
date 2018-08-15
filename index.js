@@ -22,9 +22,6 @@ const linebotParser = bot.parser();
 
 
 
-const linebotParser = bot.parser();
-
-
 var 步驟 = 0;
 var users = new Object({});
 
