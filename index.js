@@ -197,10 +197,7 @@ bot.on('message', function (event) {
 	}
 
 	if (/^delete\slineid\s\S+/.test(eventText)) {
-		mymongo.deleteMongo("form", { lineId: eventText.split(" ")[2]})
-		mymongo.getMongo("form", {}, function(result) {
-			event.reply(JSON.stringify(result))
-		})
+		mymongo.deleteMongo("form", { _id: eventText.split(" ")[2]})
 	}
 });
 
