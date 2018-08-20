@@ -22,335 +22,179 @@ const linebotParser = bot.parser();
 
 
 
-var 步驟 = 0;
-var users = new Object({});
-
+var commodity = "A1.糙米原味輕乳酪\n天然米香與輕乳酪相輔相成，細棉淡雅，是最初的感動。\n\n\nA2.糙米檸檬輕乳酪\n有機檸檬汁添加，撲鼻近視強烈香氣，卻不帶酸澀。\n\n\nA3.青仁蜜黑豆蛋糕\n黑豆磨粉更磨漿，熬煮 Q 軟蜜黑豆，戚風口感層次分明、綿密甘甜。\n\n\nA4.黑豆桂圓布朗尼\n黑豆與可可連袂舞出絕妙華爾滋!桂圓與核桃點綴曲中小節，濃烈令人深刻回味。";
+var commodity2 ="B1.地瓜檸檬打卡酥\n用糙米包覆著像心一樣柔軟的地瓜餡，吃的是溫度。\n\n\nB2.經典鳳梨打卡酥\n舊經典糙米與金鑽鳳梨碰出新的火花，新觸感令人深刻。"
 
 app.post('/linewebhook', linebotParser);
 bot.on('message', function (event) {
-
-/*var userId = event.source.userId;
 	var 收到 = event.message.text ;
-var commodity = "糙米原味輕乳酪\n天然米香與輕乳酪相輔相成，細棉淡雅，是最初的感動。\n\n\n糙米檸檬輕乳酪\n有機檸檬汁添加，撲鼻近視強烈香氣，卻不帶酸澀。\n\n\n糙米金棗輕乳酪\n宜蘭特產蜜金棗，每一口的吃得到果肉的芬芳。\n\n\n黑豆桂圓布朗尼\n黑豆與可可連袂舞出絕妙華爾滋!桂圓與核桃點綴曲中小節，濃烈令人深刻回味。";
-var commodity2 ="桂圓核桃\n這是介紹\n\n\n地瓜檸檬\n這是介紹\n\n\n經典鳳梨\n這是介紹"
 
-
-
-
-if (收到.toLowerCase() == "help") {
-   event.reply("若想要更深入的了解我們，你可以說：了解\n若想要查看我們的產品，可以說：產品\n若想要和我們訂購品，可以說：訂購").then(function (data) {
-   console.log('Success', data);
-   }).catch(function (error) {
-   console.log('Error', error);
-   });
-  }
-
-  if (收到 == "了解") {
-   event.reply("這是我們網站：http://www.twbts.tk:3000/Main.html").then(function (data) {
-    console.log('Success', data);
-   }).catch(function (error) {
-    console.log('Error', error);
-   });
-   }
-
-  if (收到 == "產品") {
-    event.reply(commodity+"\n\n說：產品2 可以換到下一頁").then(function (data) {
-    console.log('Success', data);
-    }).catch(function (error) {
-    console.log('Error', error);
-    });
-   }
-  if (收到 == "產品2") {
-    event.reply(commodity2+"\n\n說：產品 可以回到上頁").then(function (data) {
-    console.log('Success', data);
-    }).catch(function (error) {
-    console.log('Error', error);
-    });
-   }
-
-
-
-
-   if (收到 == "訂購" && event.source.groupId == event.source.roomId) {
-    if (users[userId]) {
-      if (!users[userId].step) {
-    event.reply("輸入您的名字(訂購人)").then(function (data) {
-    console.log('Success', data);
-    }).catch(function (error) {
-    console.log('Error', error);
-    });
-    users[userId].step = 1;
-    }
-   } else {
-    users[userId] = new Object({});
-   event.reply("輸入您的名字(訂購人)");
-   users[userId].step = 1;
-   users[userId].form = [];
-    }
-   }else if(users[userId]){
-    switch (true){
-            case users[userId].step == 1:
-            users[userId].form[0] = eventText;
-        event.reply(收到+"\n重寫/確認");
-       users[userId].step = 1.5;
-         break;
-         case users[userId].step == 1.5:
-        if (eventText == "確認") {
-               event.reply("輸入收件人的名字");
-               users[userId].step = 2;
-             } else {
-               event.reply("輸入您的名字(訂購人)");
-               users[userId].step = 1;
-       	}
-          break;
-					case users[userId].step == 2:
-					users[userId].form[1] = eventText;
-					 event.reply("收件人的名字：" + eventText + "嗎？\n確定的話輸入「確認」，或是輸入其他文字來修改。");
-						 users[userId].step = 2.5;
-						 break;
-				case users[userId].step == 2.5:
-		 if (eventText == "確認") {
-			event.reply("輸入商品名稱\n只要把你想要購買的商品打出來就好了");
-			users[userId].step = 3;
-		 } else {
-			event.reply("輸入收件人的名字");
-			users[userId].step = 2;
-		 }
-           case users[userId].step == 2:
-           users[userId].form[1] = eventText;
-            event.reply("收件人的名字：" + eventText + "嗎？\n確定的話輸入「確認」，或是輸入其他文字來修改。");
-              users[userId].step = 2.5;
-              break;
-         case users[userId].step == 2.5:
-      if (eventText == "確認") {
-       event.reply("輸入商品名稱\n只要把你想要購買的商品打出來就好了");
-       users[userId].step = 3;
-      } else {
-       event.reply("輸入收件人的名字");
-       users[userId].step = 2;
-      }
-      break;
-     case users[userId].step == 3:
-      users[userId].form[2] = eventText;
-      event.reply("選擇要購買的商品有：" + eventText + "\n確定的話輸入「確認」，或是輸入其他文字來修改。");
-      users[userId].step = 3.5;
-      break;
-			case users[userId].step == 3.5:
-	 if (eventText == "確認") {
-		event.reply("輸入商品名稱\n只要把你想要購買的商品打出來就好了");
-		users[userId].step = 4;
-	 } else {
-		event.reply("配送日期\n選則方便到貨日期+時段");
-		users[userId].step = 3;
-	 }
-	 break;
-	case users[userId].step == 4:
-	 users[userId].form[3] = eventText;
-	 event.reply("選擇配送日期\n選則方便到貨日期+時段是：" + eventText + "\n確定的話輸入「確認」，或是輸入其他文字來修改。");
-	 users[userId].step = 4.5;
-	 break;
-     case users[userId].step == 4.5:
-     if (eventText == "確認") {
-                 event.reply("你的回覆：\n訂購人的名字：" + users[userId].form[0] + "\n收件人：" + users[userId].form[1] + "\n購買的商品：" + users[userId].form[2] ++ "\n配送日期：" + users[userId].form[3] + "\n要重來的話輸入「重來」，或是輸入其他文字來送出。")
-                 users[userId].step = 5;
-               } else {
-                 event.reply("配送日期\n選則方便到貨日期+時段");
-                 users[userId].step = 4;
-               }
-               break;
-             case users[userId].step == 5:
-               if (eventText == "重來") {
-                 event.reply("輸入您的名字(訂購人)");
-                 users[userId].step = 1;
-               } else {
-                 event.reply("已送出！謝謝您的回覆");
-                 users[userId].step = null;
-               }
-               break;
-           }
-         }
-
-
-
-
-
-
-
-
-
-
-
-	if (收到) {
-	 步驟=1.5;
-		event.reply(收到+"\n重寫/確認").then(function (data) {
-		 console.log('Success', data);
+	if (收到 == "1") {
+		event.reply(commodity+"\n如果想要查看單樣商品，可以直接輸入商品代號。\n\n\n說『11』可以到下一頁").then(function (data) {
+			console.log('Success', data);
 		}).catch(function (error) {
-		 console.log('Error', error);
+			console.log('Error', error);
 		});
-	 }}
-	 if(步驟==1.5){
-	 if (收到 == "重寫") {
-		步驟 =1;
-		 event.reply("請在輸入一次").then(function (data) {
+	}
+
+	if (收到 == "11") {
+		event.reply(commodity2+"\n如果想要查看單樣商品，可以直接輸入商品代號\n\n\n說『1』可以到上一頁").then(function (data) {
 			console.log('Success', data);
-		 }).catch(function (error) {
+		}).catch(function (error) {
 			console.log('Error', error);
-		 });
-		}}
-
-	 if(步驟==1.5){
-	 if (收到 == "確認") {
-		步驟 = 2;
-		 event.reply("輸入收件人的名字").then(function (data) {
+		});
+	}
+	if (收到 == "2") {
+		event.reply("https://twbts.tk:3000\n↑↑↑↑↑\n上面是我們網站的連結").then(function (data) {
 			console.log('Success', data);
-		 }).catch(function (error) {
+		}).catch(function (error) {
 			console.log('Error', error);
-		 });
-	 }} else if (步驟==2) {
-			if (收到) {
-			 步驟=2.5;
-				event.reply(收到+"\n重寫/確認").then(function (data) {
-				 console.log('Success', data);
-				}).catch(function (error) {
-				 console.log('Error', error);
-				});
-			 }}
+		});
+	}
+	if (收到 == "4") {
+		event.reply("https://twbts.tk:3000  <--- This").then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
 
-			 if(步驟==2.5){
-			 if (收到 == "重寫") {
-				 步驟 = 2;
-				 event.reply("請在輸入一次").then(function (data) {
-					console.log('Success', data);
-				 }).catch(function (error) {
-					console.log('Error', error);
-				 });
-				}}
-			 if(步驟==2.5){
-			 if (收到 == "確認") {
-				步驟 = 3;
-				 event.reply("輸入商品名稱\n只要把你想要購買的商品打出來就好了。").then(function (data) {
-					console.log('Success', data);
-				 }).catch(function (error) {
-					console.log('Error', error);
-				 });
-			 }} else if (步驟==3) {
-					if (收到) {
-					 步驟=3.5;
-						event.reply(收到+"\n重寫/確認").then(function (data) {
-						 console.log('Success', data);
-						}).catch(function (error) {
-						 console.log('Error', error);
-						});
-					 }}
-					 if(步驟==3.5){
-					 if (收到 == "重寫") {
-						 步驟=3;
-						 event.reply("請在輸入一次").then(function (data) {
-							console.log('Success', data);
-						 }).catch(function (error) {
-							console.log('Error', error);
-						 });
-						}}
-					 if(步驟==3.5){
-					 if (收到 == "確認") {
-						步驟 = 4;
-						 event.reply("配送日期\n選則方便到貨日期+時段").then(function (data) {
-							console.log('Success', data);
-						 }).catch(function (error) {
-							console.log('Error', error);
-						 });
-					 }} else if (步驟==4) {
-							if (收到) {
-							 步驟=4.5;
-								event.reply(收到+"\n重寫/確認").then(function (data) {
-								 console.log('Success', data);
-								}).catch(function (error) {
-								 console.log('Error', error);
-								});
-							 }}
+	if (收到.toLowerCase() == "A1") {
+		event.reply({
+			type: "image",
+    originalContentUrl: "https://s33.postimg.cc/79fjeoycv/20180807_180815_0009.jpg",
+    previewImageUrl: "https://s33.postimg.cc/79fjeoycv/20180807_180815_0009.jpg"
+		}).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
 
-							 if(步驟==4.5){
-							 if (收到 == "重寫") {
-								 步驟=4;
-								 event.reply("請在輸入一次").then(function (data) {
-									console.log('Success', data);
-								 }).catch(function (error) {
-									console.log('Error', error);
-								 });
-								}}
-								if(步驟==4.5){
-							 if (收到 == "確認") {
-								步驟 = 5;
-								 event.reply("電話號碼").then(function (data) {
-									console.log('Success', data);
-								 }).catch(function (error) {
-									console.log('Error', error);
-								 });
-							 }} else if (步驟==5) {
-								 if (收到) {
-									步驟=5.5;
-									 event.reply(收到+"\n重寫/確認").then(function (data) {
-										console.log('Success', data);
-									 }).catch(function (error) {
-										console.log('Error', error);
-									 });
-									}}
-									if(步驟==5.5){
-									if (收到 == "重寫") {
-										步驟=5;
-										event.reply("請在輸入一次").then(function (data) {
-										 console.log('Success', data);
-										}).catch(function (error) {
-										 console.log('Error', error);
-										});
-									 }}
-									 if(步驟==5.5){
-									if (收到 == "確認") {
-									 步驟 = 6;
-										event.reply("配送地址").then(function (data) {
-										 console.log('Success', data);
-										}).catch(function (error) {
-										 console.log('Error', error);
-										});
-									}} else if (步驟==6) {
-										if (收到) {
-										 步驟=6.5;
-											event.reply(收到+"\n重寫/確認").then(function (data) {
-											 console.log('Success', data);
-											}).catch(function (error) {
-											 console.log('Error', error);
-											});
-										 }}
-										 if (步驟==6.5){
-										 if (收到 == "重寫") {
-											 步驟=6;
-											 event.reply("請在輸入一次").then(function (data) {
-												console.log('Success', data);
-											 }).catch(function (error) {
-												console.log('Error', error);
-											 });
-											}}
-											if(步驟==6.5){
-										 if (收到 == "確認") {
-											步驟 = 7;
-											 event.reply("這是您的訂購資料"+).then(function (data) {
-												console.log('Success', data);
-											 }).catch(function (error) {
-												console.log('Error', error);
-											 });
-											}}
+	if (收到.toLowerCase() == "A2") {
+		event.reply({
+			type: "image",
+    originalContentUrl: "https://s33.postimg.cc/ecneubbi7/20180807_180815_0010.jpg",
+    previewImageUrl: "https://s33.postimg.cc/ecneubbi7/20180807_180815_0010.jpg"
+		}).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+	if (收到.toLowerCase() == "A3") {
+		event.reply({
+			type: "image",
+    originalContentUrl: "https://s33.postimg.cc/sj35pijsf/20180807_180815_0008.jpg",
+    previewImageUrl: "https://s33.postimg.cc/sj35pijsf/20180807_180815_0008.jpg"
+		}).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+	if (收到.toLowerCase() == "A4") {
+		event.reply({
+			type: "image",
+    originalContentUrl: "https://s33.postimg.cc/ecneu9lrz/20180807_180815_0002.jpg",
+    previewImageUrl: "https://s33.postimg.cc/ecneu9lrz/20180807_180815_0002.jpg"
+		}).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+	if (收到.toLowerCase() == "B1") {
+		event.reply({
+			type: "image",
+		originalContentUrl: "https://s33.postimg.cc/79fjeoycv/20180807_180815_0009.jpg",
+		previewImageUrl: "https://s33.postimg.cc/79fjeoycv/20180807_180815_0009.jpg"
+		}).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
+
+	if (收到.toLowerCase() == "B2") {
+		event.reply({
+			type: "image",
+		originalContentUrl: "https://s33.postimg.cc/ils4whu73/180816_0005.jpg",
+		previewImageUrl: "https://s33.postimg.cc/ils4whu73/180816_0005.jpg"
+		}).then(function (data) {
+			console.log('Success', data);
+		}).catch(function (error) {
+			console.log('Error', error);
+		});
+	}
 
 
+});
 
+var users = new Object({});
+//定義問題＋答案類型
+var questions = ["請問你的名字是？（可不填）", "名字", "你的Line ID（回答問題需要）", "Line ID", "遇到的問題？\n想要問的問題？", "你的問題"];
+//當收到訊息
+bot.on("message", function (event) {
+  //如果訊息是文字
+  if (event.message.type == "text") {
+    var eventText = event.message.text;
+    var userId = event.source.userId;
 
-*/
+    if (!users[userId]) {
+      users[userId] = new Object({});
+    }
+    if (eventText == "問卷" && event.source.groupId == event.source.roomId && !users[userId].step) {
+      users[userId].step = 0;
+      users[userId].form = [];
+      event.reply("問卷調查開始！\n" + questions[users[userId].step]);
+      users[userId].step += 1;
+    } else {
+      if (users[userId].step <= questions.length) {
+        if (users[userId].step % 2 == 1) {
+          users[userId].form[(users[userId].step - 1) / 2] = eventText;
+          event.reply(questions[users[userId].step] + "是" + eventText + "嗎？\n（是＼否）");
+          users[userId].step += 1;
+        } else if (users[userId].step % 2 == 0) {
+          if (eventText == "是") {
+            if (users[userId].step != questions.length) {
+              event.reply("下一個問題：\n" + questions[users[userId].step]);
+              users[userId].step += 1;
+            } else {
+              var message = "調查結果：";
+              for (var i = 0; i < questions.length; i += 2) {
+                message += "\n" + questions[i + 1] + "：" + users[userId].form[i / 2];
+              }
+              event.reply(message + "\n（送出＼取消）");
+              users[userId].step += 1;
+            }
+          } else if (eventText == "否") {
+            users[userId].step -= 1;
+            event.reply("請重新輸入你的" + questions[users[userId].step]);
+          }
+        }
+      } else {
+        if (eventText == "送出") {
+          event.reply("已送出！謝謝您的回覆！");
+          users[userId].step = null;
+        } else if (eventText == "取消"){
+          event.reply("問卷調查已取消");
+          users[userId].step = null;
+        }
+      }
+    }
+  }
 });
 
 
 
 
+
+
+
+
 bot.on("follow", function (event) {
-  event.reply("您好，我是一隻賣食品的Line機器人。\n若您想要知道我有什麼功能，你可以說 help。");
+  event.reply("您好，我們是「最後的布朗尼」。這是公司的機器人Line Bot，我們有賣各類的米製點心，如果想要更近一步了解的話。\n．說1 了解各項產品資訊\n．說2 了解我們\n．說3 可以向我們問問題\n．說4 如何訂購");
 });
 
 
