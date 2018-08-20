@@ -196,7 +196,7 @@ bot.on('message', function (event) {
 		})
 	}
 
-	if (/^delete\sid\s\w+/.test(eventText)) {
+	if (/^delete\sid\s/.test(eventText)) {
 		mymongo.deleteMongo("form", { _id: eventText.split(" ")[2]})
 		mymongo.getMongo("form", {}, function(result) {
 			event.reply(JSON.stringify(result))
