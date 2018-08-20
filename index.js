@@ -179,7 +179,7 @@ bot.on('message', function (event) {
 						lineId: users[userId].form[1],
 						question: users[userId].form[2]
 					})
-					mymongo.insertMongo("form", users[userId].form);
+					mymongo.insertMongo("form", form);
           event.reply("已送出！謝謝您的回覆！");
           users[userId].step = null;
         } else if (eventText == "取消"){
