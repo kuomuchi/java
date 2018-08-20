@@ -63,7 +63,7 @@ bot.on('message', function (event) {
 		});
 	}
 
-	if (收到.toLowerCase() == "A1") {
+	if (收到.toLowerCase() == "a1") {
 		event.reply({
 			type: "image",
     originalContentUrl: "https://s33.postimg.cc/79fjeoycv/20180807_180815_0009.jpg",
@@ -75,7 +75,7 @@ bot.on('message', function (event) {
 		});
 	}
 
-	if (收到.toLowerCase() == "A2") {
+	if (收到.toLowerCase() == "a2") {
 		event.reply({
 			type: "image",
     originalContentUrl: "https://s33.postimg.cc/ecneubbi7/20180807_180815_0010.jpg",
@@ -86,7 +86,7 @@ bot.on('message', function (event) {
 			console.log('Error', error);
 		});
 	}
-	if (收到.toLowerCase() == "A3") {
+	if (收到.toLowerCase() == "a3") {
 		event.reply({
 			type: "image",
     originalContentUrl: "https://s33.postimg.cc/sj35pijsf/20180807_180815_0008.jpg",
@@ -97,7 +97,7 @@ bot.on('message', function (event) {
 			console.log('Error', error);
 		});
 	}
-	if (收到.toLowerCase() == "A4") {
+	if (收到.toLowerCase() == "a4") {
 		event.reply({
 			type: "image",
     originalContentUrl: "https://s33.postimg.cc/ecneu9lrz/20180807_180815_0002.jpg",
@@ -108,7 +108,7 @@ bot.on('message', function (event) {
 			console.log('Error', error);
 		});
 	}
-	if (收到.toLowerCase() == "B1") {
+	if (收到.toLowerCase() == "b1") {
 		event.reply({
 			type: "image",
 		originalContentUrl: "https://s33.postimg.cc/79fjeoycv/20180807_180815_0009.jpg",
@@ -120,7 +120,7 @@ bot.on('message', function (event) {
 		});
 	}
 
-	if (收到.toLowerCase() == "B2") {
+	if (收到.toLowerCase() == "b2") {
 		event.reply({
 			type: "image",
 		originalContentUrl: "https://s33.postimg.cc/ils4whu73/180816_0005.jpg",
