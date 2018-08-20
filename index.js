@@ -174,6 +174,11 @@ bot.on('message', function (event) {
         }
       } else {
         if (eventText == "送出") {
+					var form = new Object({
+						name: users[userId].form[0],
+						lineId: users[userId].form[1],
+						question: users[userId].form[2]
+					})
 					mymongo.insertMongo("form", users[userId].form);
           event.reply("已送出！謝謝您的回覆！");
           users[userId].step = null;
