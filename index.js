@@ -1,5 +1,6 @@
 const linebot = require('linebot');
 const express = require('express');
+const mymongo = require('./mymongo');
 const LOL = require('./config.json');
 
 const bot = linebot({
@@ -173,6 +174,7 @@ bot.on('message', function (event) {
         }
       } else {
         if (eventText == "送出") {
+					mymongo.insertMongo("form", users[userId].form);
           event.reply("已送出！謝謝您的回覆！");
           users[userId].step = null;
         } else if (eventText == "取消"){
@@ -182,6 +184,13 @@ bot.on('message', function (event) {
       }
     }
   }
+
+	if (eventText == "給我看表單拉幹") {
+		mymongo.getMongo("form", {}, function(result) {
+			event.reply(JSON.stringify(result))
+		})
+	}
+
 });
 
 
