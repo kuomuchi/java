@@ -21,6 +21,10 @@ app.get('/',function(req,res){
 const linebotParser = bot.parser();
 
 
+var users = new Object({});
+//定義問題＋答案類型
+var questions = ["請問你的名字是？（可不填）", "名字", "你的Line ID（回答問題需要）", "Line ID", "遇到的問題？\n想要問的問題？", "你的問題"];
+//當收到訊息
 
 var commodity = "A1.糙米原味輕乳酪\n天然米香與輕乳酪相輔相成，細棉淡雅，是最初的感動。\n\n\nA2.糙米檸檬輕乳酪\n有機檸檬汁添加，撲鼻近視強烈香氣，卻不帶酸澀。\n\n\nA3.青仁蜜黑豆蛋糕\n黑豆磨粉更磨漿，熬煮 Q 軟蜜黑豆，戚風口感層次分明、綿密甘甜。\n\n\nA4.黑豆桂圓布朗尼\n黑豆與可可連袂舞出絕妙華爾滋!桂圓與核桃點綴曲中小節，濃烈令人深刻回味。";
 var commodity2 ="B1.地瓜檸檬打卡酥\n用糙米包覆著像心一樣柔軟的地瓜餡，吃的是溫度。\n\n\nB2.經典鳳梨打卡酥\n舊經典糙米與金鑽鳳梨碰出新的火花，新觸感令人深刻。"
@@ -129,14 +133,8 @@ bot.on('message', function (event) {
 	}
 
 
-});
 
-var users = new Object({});
-//定義問題＋答案類型
-var questions = ["請問你的名字是？（可不填）", "名字", "你的Line ID（回答問題需要）", "Line ID", "遇到的問題？\n想要問的問題？", "你的問題"];
-//當收到訊息
-bot.on("message", function (event) {
-  //如果訊息是文字
+
   if (event.message.type == "text") {
     var eventText = event.message.text;
     var userId = event.source.userId;
@@ -185,6 +183,7 @@ bot.on("message", function (event) {
     }
   }
 });
+
 
 
 
