@@ -1,6 +1,6 @@
 const linebot = require('linebot');
 const express = require('express');
-const mymongo = require('./mymongo');
+const mymongo = require('./mymongo.js');
 const LOL = require('./config.json');
 
 const bot = linebot({
