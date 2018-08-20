@@ -144,7 +144,7 @@ bot.on("message", function (event) {
     if (!users[userId]) {
       users[userId] = new Object({});
     }
-    if (eventText == "問卷" && event.source.groupId == event.source.roomId && !users[userId].step) {
+    if (eventText == "3" && event.source.groupId == event.source.roomId && !users[userId].step) {
       users[userId].step = 0;
       users[userId].form = [];
       event.reply("問卷調查開始！\n" + questions[users[userId].step]);
