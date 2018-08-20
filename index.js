@@ -1,6 +1,5 @@
 const linebot = require('linebot');
 const express = require('express');
-const ObjectID = require('mongodb').ObjectID
 const mymongo = require('./mymongo.js');
 const LOL = require('./config.json');
 
@@ -197,10 +196,10 @@ bot.on('message', function (event) {
 		})
 	}
 
-	if (/^delete\sid\s\S+/.test(eventText)) {
-		mymongo.deleteMongo("form", { _id: new ObjectID(eventText.split(" ")[2])})
+	if (/^delete\slineid\s\S+/.test(eventText)) {
+		mymongo.deleteMongo("form", { lineId: eventText.split(" ")[2]})
 		mymongo.getMongo("form", {}, function(result) {
-			event.reply(eventText.split(" ")[2])
+			event.reply(JSON.stringify(result))
 		})
 	}
 });
