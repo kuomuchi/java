@@ -113,11 +113,11 @@ bot.on('message', function (event) {
           }
         }
      } else if (reply[eventText]) {
-  event.reply(reply[eventText]).then(function (data) {
-   console.log('Success', data);
-  }).catch(function (error) {
-   console.log('Error', error);
-  });
+	  event.reply(reply[eventText]).then(function (data) {
+	   console.log('Success', data);
+	  }).catch(function (error) {
+	   console.log('Error', error);
+	  });
  } else if (eventText == "給我看表單" && userId == owner) {
     mymongo.getMongo("form", {}, function(result) {
       event.reply(JSON.stringify(result))
@@ -127,6 +127,7 @@ bot.on('message', function (event) {
   } else {
    event.reply(reply["default"]);
   }
+	console.log("hi");
 });
 
 
