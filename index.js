@@ -18,10 +18,9 @@ app.get('/',function(req,res){
     res.send('Hello World!');
 });
 
-
-
 const linebotParser = bot.parser();
 
+var questions = ["請問你的名字是？（可不填）", "名字", "你的Line ID（回答問題需要）", "Line ID", "遇到的問題？\n想要問的問題？", "你的問題"];
 var users = new Object({});
 var reply = new Object ({
  "default": "輸入『米蛋糕』或『打卡蘇』來獲得產品資訊\n輸入『網站』獲取網站連結\n輸入『訂購』進入訂購的頁面" ,
