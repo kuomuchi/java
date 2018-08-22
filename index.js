@@ -27,6 +27,7 @@ var reply = new Object ({
  "米蛋糕": "a1糙米原味輕乳酪\n天然米香與輕乳酪相輔相成，細棉淡雅，是最初的感動。\n\n\na2糙米檸檬輕乳酪\n有機檸檬汁添加，撲鼻近視強烈香氣，卻不帶酸澀。\n\n\na3糙米金棗輕乳酪\n宜蘭特產蜜金棗，每一口的吃得到果肉的芬芳。\n\n\na4黑豆桂圓布朗尼\n黑豆與可可連袂舞出絕妙華爾滋!桂圓與核桃點綴曲中小節，濃烈令人深刻回味。\n\n\n輸入商品的代碼可以看到商品的圖片",
  "打卡蘇": "b1地瓜檸檬\n用糙米包覆著像心一樣柔軟的地瓜餡，吃的是溫度。\n\n\nb2經典鳳梨\n舊經典糙米與金鑽鳳梨碰出新的火花，新觸感令人深刻。\n\n\n輸入商品的代碼可以看到商品的圖片",
  "訂購": "https://cashier.ecpay.com.tw/store/twbts  <--- This",
+ "問題":"如何訂購:https://cashier.ecpay.com.tw/store/twbts \n\n\n如何聯繫我們:聯繫我們的方式\n電話:0952982634\nLineID:killua1228\nFB:https://www.facebook.com/%E6%9C%80%E5%BE%8C%E7%9A%84%E5%B8%83%E6%9C%97%E5%B0%BC-241305259857608/?modal=admin_todo_tour \n\n\n如何退款:若想要退款，可以直接聯繫我們。\n\n\n更多的FAQ:https://twbts.tk  #FAQ",
  "a1": {
       type: "image",
       originalContentUrl: "https://s33.postimg.cc/79fjeoycv/20180807_180815_0009.jpg",
@@ -134,7 +135,7 @@ bot.on('message', function (event) {
 
 
 bot.on("follow", function (event) {
-  event.reply("輸入『米蛋糕』或『打卡蘇』來獲得產品資訊\n輸入『網站』獲取網站連結\n輸入『訂購』進入訂購的頁面\n輸入『QA』可以在Line上問我們問題\n\n\n我們的網站 https://twbts.tk");
+  event.reply("輸入『米蛋糕』或『打卡蘇』來獲得產品資訊\n輸入『網站』獲取網站連結\n輸入『訂購』進入訂購的頁面\n輸入『問題』可以看到常見的問題\n輸入『QA』可以在Line上問我們問題\n\n\n我們的網站 https://twbts.tk");
 });
 
 
