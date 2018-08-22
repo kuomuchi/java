@@ -20,7 +20,7 @@ app.get('/',function(req,res){
 const linebotParser = bot.parser();
 app.post('/linewebhook', linebotParser);
 
-var owner = "U813645541c262fb6d9c967efeb884aeb";
+const owner = "U813645541c262fb6d9c967efeb884aeb";
 
 var questions = ["請問你的名字是？（可不填）", "名字", "你的Line ID（回答問題需要）", "Line ID", "遇到的問題？\n想要問的問題？", "你的問題"];
 var users = new Object({});
