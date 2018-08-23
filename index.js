@@ -136,7 +136,7 @@ bot.on('message', function (event) {
 
 
 bot.on("follow", function (event) {
-  event.reply("輸入『米蛋糕』或『打卡酥』來獲得產品資訊\n輸入『問題』可以看到常見的問題\n\n我們的網站 https://twbts.tk \n\n訂購的網址 https://cashier.ecpay.com.tw/store/twbts");
+  event.reply("您好，我們是最後的布朗尼。\n\n輸入任何一文字來查看我的功能。");
 });
 
 
