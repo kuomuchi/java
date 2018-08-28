@@ -28,7 +28,7 @@ var reply = new Object ({
  "default": "輸入『米蛋糕』或『打卡酥』來獲得產品資訊\n輸入『問題』可以看到常見的問題\n\n我們的網站\n https://twbts.tk \n\n訂購的網址\n https://cashier.ecpay.com.tw/store/twbts" ,
  "米蛋糕": "a1糙米原味輕乳酪\n天然米香與輕乳酪相輔相成，細棉淡雅，是最初的感動。\n\n\na2糙米檸檬輕乳酪\n有機檸檬汁添加，撲鼻近視強烈香氣，卻不帶酸澀。\n\n\na3糙米金棗輕乳酪\n宜蘭特產蜜金棗，每一口的吃得到果肉的芬芳。\n\n\na4黑豆桂圓布朗尼\n黑豆與可可連袂舞出絕妙華爾滋!桂圓與核桃點綴曲中小節，濃烈令人深刻回味。\n\n\n*輸入商品的代碼可以看到商品的圖片\n\n\n到網站上查看照片 https://twbts.tk/#INFO",
  "打卡酥": "b1地瓜檸檬\n用糙米包覆著像心一樣柔軟的地瓜餡，吃的是溫度。\n\n\nb2經典鳳梨\n舊經典糙米與金鑽鳳梨碰出新的火花，新觸感令人深刻。\n\n\n*輸入商品的代碼可以看到商品的圖片\n\n\n到網站上查看照片 https://twbts.tk/#INFO",
- "問題":"什麼是打卡酥?\n打卡蘇其實是鳳梨酥，只是內餡不太一樣。\n\n\n如何訂購?\nhttps://cashier.ecpay.com.tw/store/twbts\n\n\n如何聯繫我們?\n\n聯繫我們的方式\n電話:0952982634\nLineID:killua1228\nFB:https://goo.gl/ufzDez \n\n\n如何退款?\n若想要退款，可以直接聯繫我們。\n\n\n更多的FAQ:https://twbts.tk/#FAQ  #FAQ",
+ "問題":"什麼是打卡酥?\n打卡蘇其實是鳳梨酥，只是內餡不太一樣。\n\n\n如何訂購?\nhttps://cashier.ecpay.com.tw/store/twbts\n\n\n如何聯繫我們?\n\n聯繫我們的方式\n電話:0952982634\nLineID:killua1228\nFB: fb.me/TheLastBrownie \n\n\n如何退款?\n若想要退款，可以直接聯繫我們。\n\n\n更多的FAQ:https://twbts.tk/#FAQ  #FAQ",
  "a1": {
       type: "image",
       originalContentUrl: "https://s33.postimg.cc/79fjeoycv/20180807_180815_0009.jpg",
